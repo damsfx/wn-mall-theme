@@ -1,5 +1,5 @@
 /**!
- * wn-mall-theme - 2.0.0 - 20260417-171812
+ * wn-mall-theme - 2.0.0 - 20260514-040106
  * Official starter theme for the Winter.Mall e-commerce plugin
  *
  * Tobias Kuendig - OFFLINE (https://www.offline.swiss/)

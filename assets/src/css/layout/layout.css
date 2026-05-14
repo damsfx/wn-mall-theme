@@ -5,6 +5,11 @@
     navigation: auto;
 }
 
+:root {
+    scrollbar-color: color-mix(in oklch, currentColor 35%, #0000) #0000;
+    overflow: var(--page-overflow);
+}
+
 body {
     /* font-family: Overpass, Arial, Helvetica, sans-serif; */
     @apply flex flex-col min-h-screen;

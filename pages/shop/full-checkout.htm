@@ -1,0 +1,18 @@
+title = "Full checkout"
+url = "/full-checkout/:step?"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeUrl[en] = "/full-checkout/:step?"
+
+[signUp]
+
+[checkout]
+step = "{{ :step }}"
+==
+{% if not user %}
+    {% component 'signUp' %}
+{% else %}
+    {% component 'checkout' %}
+{% endif %}

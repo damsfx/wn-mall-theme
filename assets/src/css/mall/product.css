@@ -144,7 +144,7 @@
  */
 .mall-product-service {
     &:not(:last-child) {
-        @apply mb-12;
+        @apply mb-8;
     }
     .mall-product-service__name {
         @apply mb-3 font-semibold;
@@ -165,7 +165,7 @@
     @apply border-b border-base-200;
 
     .mall-product-service-option {
-        @apply flex flex-wrap px-0 py-4 text-sm border-t border-base-200;
+        @apply flex flex-wrap px-0 py-3 text-sm border-t border-base-200;
 
         .mall-product-service-option__radio {
             @apply flex-[0,1,40px];
@@ -178,14 +178,8 @@
             @apply flex-[1,0,100px];
         }
         .mall-product-service-option__description {
-            @apply pl-10 mt-2 text-xs text-base-content pr-[100px];
+            @apply pl-10 text-xs text-base-content pr-[100px];
             @apply flex-[1,0,100%];
-            /*
-            margin-top: .5rem;
-            padding-left: 40px;
-            padding-right: 100px;
-            flex: 1 0 100%;
-            */
         }
     }
 }

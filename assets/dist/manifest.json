@@ -4,9 +4,13 @@
     "src": "assets/images/logo.webp"
   },
   "assets/src/css/app.css": {
-    "file": "css/app-uVV1iKRa.css",
+    "file": "css/app-OMJ7enDY.css",
     "src": "assets/src/css/app.css",
     "isEntry": true
+  },
+  "assets/src/images/chevron-down.svg": {
+    "file": "images/chevron-down-jcmD7k79.svg",
+    "src": "assets/src/images/chevron-down.svg"
   },
   "assets/src/js/app.js": {
     "file": "js/app-l0sNRNKZ.js",

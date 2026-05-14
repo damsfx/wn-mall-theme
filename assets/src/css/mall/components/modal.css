@@ -1,12 +1,12 @@
 .mall-modal {
 
-    @apply absolute inset-0 invisible overflow-y-scroll opacity-0 pointer-events-none z-1000 bg-black/50;
+    @apply fixed inset-0 invisible overflow-y-scroll opacity-0 pointer-events-none z-1000 bg-black/50;
 
     transition: .3s ease;
     transition-property: opacity, visibility;
 
     &.mall-modal--visible {
-        @apply visible opacity-100 pointer-events-auto;
+        @apply visible h-full opacity-100 pointer-events-auto;
     }
 
     .mall-modal__inner {
@@ -21,4 +21,9 @@
     .mall-modal__actions {
         @apply flex items-center justify-between mt-8;
     }
+}
+
+
+:root:has(.mall-modal.mall-modal--visible) {
+    --page-overflow: hidden;
 }

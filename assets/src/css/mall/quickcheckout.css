@@ -1,0 +1,200 @@
+/*-------------------------------------------------
+ *  Mall QUICK checkout
+ *-------------------------------------------------*/
+
+.mall-quick-checkout {
+    @apply flex justify-between;
+
+    :where(h2, h4) {
+        @apply my-0;
+    }
+
+    :where(table) {
+        @apply my-4;
+    }
+
+    /* The two columns */
+    .mall-quick-checkout__content-column {
+        flex: 2;
+        @apply pr-8 flex-[2_1_0%];
+    }
+    .mall-quick-checkout__cart-column {
+        @apply border-l border-base-100;
+        @apply pl-8 flex-[1_1_0%];
+    }
+
+    .mall-quick-checkout__heading {
+        @apply text-base uppercase text-base-content;
+    }
+
+
+    /* Collapsible sections */
+    .mall-quick-checkout__collapsible {
+        @apply border rounded shadow border-base-200;
+
+        .mall-quick-checkout__collapsible-element {
+            @apply border-b border-base-200;
+
+            &:hover:not(.mall-quick-checkout__collapsible-element--open) {
+                @apply cursor-pointer bg-base-100;
+
+                .mall-quick-checkout__collapsible-header:after {
+                    @apply shadow-md bg-base-300 animate-bounce;
+                }
+            }
+        }
+        .mall-quick-checkout__collapsible-element--open {
+            @apply cursor-default;
+
+            .mall-quick-checkout__collapsible-content {
+                @apply max-h-fit;
+            }
+            .mall-quick-checkout__collapsible-summary {
+                @apply hidden;
+            }
+
+            .mall-quick-checkout__collapsible-header:after {
+                @apply rotate-180;
+            }
+        }
+        .mall-quick-checkout__collapsible-header {
+            @apply flex items-center px-6 py-4;
+
+            &:after {
+                @apply content-[''] ml-auto inline-grid place-content-center size-[2em] border border-base-200 rounded-full;
+                @apply bg-chevron-down;
+            }
+        }
+        .mall-quick-checkout__collapsible-summary {
+            @apply ml-4 text-sm text-base-content;
+        }
+        .mall-quick-checkout__collapsible-content {
+            @apply overflow-hidden;
+            transition: max-height .2s ease-out;
+            max-height: 0;
+        }
+        .mall-quick-checkout__collapsible-inner {
+            @apply  px-8 pb-4;
+        }
+    }
+
+    /* Form */
+    .mall-quick-checkout__address,
+    .mall-address-form--billing,
+    .mall-quick-checkout__billing-address,
+    .mall-address-form--shipping {
+        @apply grid gap-4;
+
+        .mall-form-control {
+            @apply w-full;
+
+            input,
+            textarea,
+            select,
+            .mall-input {
+                @apply w-full px-2;
+                --size: calc(var(--size-field, 0.25rem) * 8);
+            }
+        }
+
+        .mall-two-fields {
+            .mall-form-control {
+                @apply mb-0;
+            }
+        }
+
+        .mall-address-form--shipping {}
+    }
+    .mall-shipping-address {
+        @apply pt-8!;
+    }
+    /* Form states */
+    &:has([name="as_guest"]:checked) {
+        .mall-quick-checkout__password-inputs {
+            @apply hidden!;
+        }
+    }
+    &:has([name="use_different_shipping"]:checked) {
+        .mall-shipping-address {
+            @apply block!;
+        }
+    }
+    .mall-quick-checkout__sign-in-link {
+        @apply mb-4 -mt-2 text-sm text-base-content;
+    }
+
+    /* Payement methods */
+    .mall-quick-checkout__payment-method-form > div {
+        @apply mt-4;
+    }
+
+
+    /* Cart  */
+    .mall-cart__wrapper,
+    .mall-cart__table td {
+        border: none;
+    }
+    .mall-cart__table td {
+        @apply px-2 py-2;
+    }
+    .mall-cart__services td {
+        @apply text-right;
+    }
+    .mall-cart__discount td {
+        @apply py-1;
+    }
+
+
+    .mall-quick-checkout__actions {
+        @apply mt-4;
+    }
+    .mall-btn-checkout {
+        @apply w-full text-lg font-bold uppercase;
+    }
+    .mall-quick-checkout__toggle-option {
+        display: flex;
+        justify-content: space-between;
+        @apply text-sm no-underline cursor-pointer text-base-content border-base-200;
+
+        .mall-quick-checkout__toggle-option-logo {
+            width: 75px;
+            flex: 0 0 75px;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .mall-quick-checkout__toggle-option-image {
+            max-width: 100%;
+            display: block;
+        }
+
+        .mall-quick-checkout__toggle-option-text {
+            flex: 1 1 auto;
+            @apply py-4;
+        }
+
+        .mall-quick-checkout__toggle-option-price {
+            @apply mt-1 font-bold;
+        }
+
+        .mall-selection-indicator {
+            margin-right: 20px;
+        }
+
+        &:hover .mall-selection-indicator:not(.mall-selection-indicator--active) {
+            @apply text-base-content;
+        }
+    }
+    .mall-signup-terms {
+        @apply my-8;
+    }
+}
+
+.mall-selection-indicator {
+    @apply flex items-center justify-center py-4 font-bold bg-base-100 text-base-100 size-8 mt-2.5 rounded-full leading-none;
+
+    &.mall-selection-indicator--active {
+        @apply bg-primary;
+    }
+}

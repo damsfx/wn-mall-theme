@@ -1,102 +1,187 @@
+/*-------------------------------------------------
+ *  Mall cart
+ *-------------------------------------------------*/
+
+/* You can make quick changes by adjusting the values in these utilities */
+@utility max-cart-width {
+    @apply w-full mx-auto lg:max-w-4/5;
+}
+@utility thin-border {
+    @apply border-t border-base-200;
+}
+@utility thick-border {
+    @apply border-t border-base-300;
+}
+
+
 .mall-cart {
     .mall-cart__wrapper {
+        @apply max-cart-width;
         @apply relative overflow-hidden border-y border-base-200;
     }
+
     .mall-cart__table {
         @apply w-full my-0 text-left border-collapse;
+
+        td {
+            @apply align-top;
+        }
+
+        select {
+            @apply inline-block w-min;
+        }
     }
 
+    /* Backgrounded lines   */
     .mall-cart__header th {
-        @apply p-2 text-sm font-semibold bg-base-100 text-base-content;
+        @apply bg-base-200;
+    }
+    .mall-cart__empty {
+        @apply bg-white
+    }
+
+    /* Bordered Lines */
+    .mall-cart__product td,
+    .mall-cart__taxes td,
+    .mall-cart__taxes-total td,
+    .mall-cart__total td,
+    .mall-cart__grand-total td,
+    .mall-cart__services--first td {
+        @apply thin-border;
+    }
+    .mall-cart__payment td,
+    .mall-cart__discount td,
+    .mall-cart__shipping td {
+        @apply thick-border;
+    }
+
+    /* generics cells */
+    .mall-cart__header th {
+        @apply p-2 text-sm font-semibold text-base-content thick-border;
     }
     .mall-cart__product td {
-        @apply p-2 text-xs leading-normal border-t border-base-200 whitespace-nowrap;
+        @apply p-2 text-xs leading-normal whitespace-nowrap;
 
         &:first-child {
             @apply w-32 border-base-300;
         }
-        a {
-            @apply no-underline;
+        &:nth-child(2) > a {
+            @apply font-semibold no-underline;
         }
+        &:nth-last-child(-n+3) {
+            @apply align-middle w-26;
+        }
+
         img {
             @apply my-0;
         }
 
-        .js-mall-remove-product {
-            @apply underline text-primary;
+        > div {
+            @apply block;
+        }
+
+        > .text-muted {
+            @apply text-neutral;
         }
     }
 
+    /* specifics cells */
     .mall-cart__payment td,
     .mall-cart__discount td,
     .mall-cart__shipping td {
-        @apply p-2 text-xs border-t whitespace-nowrap;
+        @apply p-2 text-xs whitespace-nowrap;
     }
 
     .mall-cart__taxes {
         td {
-            @apply p-2 text-xs border-t whitespace-nowrap border-base-200;
-             /* text-grey-dark */
+            @apply p-2 text-xs whitespace-nowrap text-base-content;
         }
         .mall-cart__taxes--1 td {
-            @apply border-base-200;
+            @apply thick-border;
         }
     }
     .mall-cart__taxes-total td {
-        @apply p-2 text-xs border-t whitespace-nowrap border-base-200;
-         /* text-grey-dark */
+        @apply p-2 text-xs whitespace-nowrap text-base-content;
     }
     .mall-cart__total td {
-        @apply p-2 text-xs font-semibold border-t border-base-200;
-        /* bg-grey-lightest text-grey-darker */
+        @apply p-2 text-xs font-semibold;
     }
     .mall-cart__grand-total td {
-        @apply p-2 text-sm font-semibold border-t border-base-200;
-        /* bg-grey-lightest text-grey-darker */
+        @apply p-2 text-sm font-semibold;
     }
     .mall-cart__empty {
-        @apply w-1/2 p-6 m-auto text-center bg-base-100;
-    }
-    .mall-cart__services td {
-        @apply px-2 py-1 text-xs;
-         /* bg-grey-lightest text-grey-darker; */
+        @apply w-1/2 p-6 m-auto text-center;
     }
     .mall-cart__services--first td {
-        @apply pt-2 border-t border-base-200;
+        @apply pt-2;
     }
     .mall-cart__services--last td {
         @apply pb-2;
     }
     .mall-cart__price-additions {
-
-        /* @apply text-grey-dark; */
-        font-style: italic;
+        @apply italic text-base-content;
     }
 }
 
 .mall-cart-actions {
-    @apply pt-8 mt-8 text-right border-t border-base-100;
+    @apply max-cart-width thick-border;
+    @apply pt-8 mt-8 text-right;
+
     .mall-btn {
         @apply text-base;
     }
 }
 
 .mall-discount-applier {
+    @apply max-cart-width;
     @apply flex justify-end w-full mt-8;
 
     form {
         @apply flex items-end w-1/2;
     }
+
     .mall-form-control {
         @apply mb-0 grow;
+
         input {
-            @apply py-2 mb-0 text-sm;
+            @apply w-full py-2 mb-0 text-sm;
         }
     }
+
     .mall-btn {
         @apply py-2 ml-2 shrink;
     }
-    [data-validate-for] {
-        @apply absolute;
+
+    .mall-form-control {
+        [data-validate-for] {
+            @apply absolute text-base;
+        }
     }
 }
+
+/*
+ *  Apply to .mall-cart scope, .mall-quick-checkout__cart
+ */
+    .mall-cart__total td,
+    .mall-cart__grand-total td,
+    .mall-cart__services td {
+        @apply bg-base-100 text-base-content;
+    }
+    .mall-cart__total td {
+        @apply font-semibold;
+    }
+    .mall-cart__grand-total td {
+        @apply font-bold;
+    }
+    .mall-cart__services td {
+        @apply px-2 py-1 text-xs;
+    }
+
+    .js-mall-remove-product,
+    .js-mall-remove-discount-code {
+        @apply relative pl-4 underline;
+
+        &:before {
+            @apply content-['❌'] absolute inline-block left-0 text-[.75em] top-0.5;
+        }
+    }
