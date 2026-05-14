@@ -1,0 +1,20 @@
+/*-------------------------------------------------
+ *  Default layout
+ *-------------------------------------------------*/
+@view-transition {
+    navigation: auto;
+}
+
+body {
+    /* font-family: Overpass, Arial, Helvetica, sans-serif; */
+    @apply flex flex-col min-h-screen;
+}
+
+
+footer {
+    @apply py-6 border-solid border-t border-stone-300 text-stone-500;
+
+    :where(a) {
+        @apply underline text-stone-700;
+    }
+}

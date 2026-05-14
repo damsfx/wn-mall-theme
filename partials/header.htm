@@ -3,20 +3,20 @@ function onStart() {
     $this->page['query'] = input('q');
 }
 ==
-<div class="top-bar bg-grey-lighter border-b border-grey-light py-1">
-    <div class="container mx-auto flex items-center text-xs text-grey-darkest">
-        <div class="w-1/2">
+<div class="top-bar">
+    <div class="container">
+        <div>
             {% partial 'session' %}
         </div>
-        <div class="w-1/2 text-right flex justify-end">
+        <div>
             {% component 'currencyPicker' %}
             {% component 'localePicker' %}
         </div>
     </div>
 </div>
-<header class="header py-8">
-    <div class="container mx-auto flex">
-        <div class="w-1/3">
+<header>
+    <div class="container">
+        <div>
             <div>
                 <form action="{{ 'search' | page }}" method="get">
                     <input name="q"
@@ -29,12 +29,12 @@ function onStart() {
                 </form>
             </div>
         </div>
-        <div class="w-1/3 text-center">
+        <div>
             <a href="{{ '/' | app }}" class="text-3xl text-primary uppercase no-underline ">
                 Mall
             </a>
         </div>
-        <div class="w-1/3 flex justify-end">
+        <div>
             <div class="mall-account-button">
                 {% partial 'accountButton/default' %}
             </div>

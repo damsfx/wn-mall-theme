@@ -1,13 +1,13 @@
 name: 'Mall Starter'
 description: 'Official starter theme for the Mall e-commerce plugin'
-author: 'OFFLINE GmbH'
-homepage: 'https://offline.swiss'
+author: 'Winter'
+homepage: 'https://winter.com'
 require:
-- Rainlab.Translate
-- Rainlab.Pages
-- Rainlab.User
-- Rainlab.Location
-- OFFLINE.SiteSearch
-- OFFLINE.Mall
-authorCode: OFFLINE
+- Winter.Translate
+- Winter.Pages
+- Winter.User
+- Winter.Location
+# - OFFLINE.SiteSearch
+- Winter.Mall
+authorCode: Winter
 code: Mall

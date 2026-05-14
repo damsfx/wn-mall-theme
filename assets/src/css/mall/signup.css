@@ -1,0 +1,35 @@
+.mall-signup {
+    @apply flex w-4/5 m-auto;
+
+    .mall-signup__signup,
+    .mall-signup__signin {
+        @apply w-1/2 border border-fields-border rounded p-8 self-start;
+    }
+
+    :where(h3) {
+        @apply mt-0!;
+    }
+
+    .mall-signup__subheading {
+        @apply mb-4 mt-2 leading-normal;
+    }
+    .mall-signup__signin {
+        @apply mr-4;
+    }
+    .mall-signup__signup {
+        @apply ml-4;
+    }
+    .mall-signup__guest-option {
+        @apply mb-8 -mt-2;
+    }
+    .mall-signup__shipping-address-option {
+        @apply mb-8 -mt-2;
+    }
+    .mall-form-actions .mall-btn--primary {
+        @apply text-base;
+    }
+
+    .mall-signup-terms {
+        @apply bg-fields-background p-6 rounded border border-fields-border;
+    }
+}

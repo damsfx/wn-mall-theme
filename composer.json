@@ -1,8 +1,29 @@
 {
-    "name": "offline/oc-mall-theme",
-    "type": "october-theme",
-    "description": "Example implementation of oc-mall-plugin",
+    "name": "winter/wn-mall-theme",
+    "type": "winter-theme",
+    "description": "Example implementation of Winter.Mall plugin",
+    "keywords": [
+        "winter",
+        "cms",
+        "theme",
+        "mall",
+        "shop"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Kündig",
+            "email": "tobias@offline.ch",
+            "role": "Original author"
+        },
+        {
+            "name": "Damien MATHIEU",
+            "email": "damsfx@gmail.com",
+            "role": "Maintainer"
+        }
+    ],
     "require": {
-        "composer/installers": "~1.0"
+        "composer/installers": "~1.0",
+        "winter/wn-pages-plugin": "^2.2"
     }
 }

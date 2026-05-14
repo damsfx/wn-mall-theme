@@ -1,0 +1,51 @@
+
+/*-------------------------------------------------
+ *  Tailwindcss
+ *-------------------------------------------------*/
+@import 'tailwindcss';
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+/*-------------------------------------------------
+ *  Tailwindcss Theme
+ *-------------------------------------------------*/
+@theme {
+    --color-primary-50: oklch(0.958 0.016 282.34);
+    --color-primary-100: oklch(0.925 0.03 283.76);
+    --color-primary-200: oklch(0.84 0.064 282);
+    --color-primary-300: oklch(0.763 0.097 281.23);
+    --color-primary-400: oklch(0.68 0.134 278.87);
+
+    --color-header-background: var(--color-stone-200);
+    --color-fields-color: var(--color-stone-500);
+    --color-fields-border: var(--color-stone-200);
+    --color-fields-background: var(--color-stone-200);
+
+    --background-image-chevron-down: url('./../images/dropdown.svg');
+}
+
+/*-------------------------------------------------
+ *  Tailwindcss custom variants & utilities
+ *-------------------------------------------------*/
+@custom-variant dark (&:where(.dark, .dark *, [data-theme=dark], [data-theme=dark] *));
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+
+    @variant lg {
+        padding-inline: 1rem;
+    }
+}
+
+/*-------------------------------------------------
+ *  Layout
+ *-------------------------------------------------
+ @import './layout/typography.css' layer(base);
+ */
+@import './layout/layout.css' layer(base);
+@import './layout/header.css' layer(base);
+
+@import './components/forms.css';
+
+@import './mall/signup.css' layer(base);

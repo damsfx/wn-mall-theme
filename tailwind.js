@@ -98,7 +98,46 @@ module.exports = {
     |
     */
 
-    colors: colors,
+    colors: {
+        'transparent': 'transparent',
+
+        'primary': '#103d60',
+        'primary-light': '#144b76',
+        'secondary': '#ef7204',
+        'secondary-light': '#ef5c12',
+
+        'black': '#222b2f',
+        'grey-darkest': '#364349',
+        'grey-darker': '#596a73',
+        'grey-dark': '#70818a',
+        'grey': '#9babb4',
+        'grey-light': '#dae4e9',
+        'grey-lighter': '#f3f7f9',
+        'grey-lightest': '#fafcfc',
+        'smoke-dark': '#ccd6db',
+        'smoke': '#dae4e9',
+        'smoke-light': '#f1f6f8',
+        'smoke-lightest': '#f6fbfd',
+        'white': '#ffffff',
+
+        'red-darkest': '#420806',
+        'red-dark': '#cc1f1a',
+        'red': '#e3342f',
+        'red-light': '#ef5753',
+        'red-lightest': '#fcebea',
+
+        'orange-darkest': '#542605',
+        'orange-light': '#faad63',
+        'orange-lightest': '#fff5eb',
+
+        'yellow-darkest': '#453411',
+        'yellow-lightest': '#fcfbeb',
+
+        'blue-darker': '#103d60',
+        'blue-dark': '#2779bd',
+        'blue': '#3490dc',
+
+    },
 
     /*
     |-----------------------------------------------------------------------------
