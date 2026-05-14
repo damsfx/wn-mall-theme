@@ -11,3 +11,6 @@ require:
 - Winter.Mall
 authorCode: Winter
 code: Mall
+
+vite:
+    theme-mall: vite.config.mjs

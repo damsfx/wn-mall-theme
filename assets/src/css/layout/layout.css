@@ -12,9 +12,27 @@ body {
 
 
 footer {
-    @apply py-6 border-solid border-t border-stone-300 text-stone-500;
+    @apply grow text-footer-text bg-footer-bg py-6 border-t-6 border-border;
 
     :where(a) {
-        @apply underline text-stone-700;
+        @apply underline text-accent-400;
+    }
+
+    .winter-logo {
+        @apply inline-block w-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400;
+
+        > svg {
+            @apply w-52 lg:w-full text-white fill-current group-hover:text-accent-400 transition-colors;
+        }
+    }
+
+    .container {
+        @apply flex gap-8 items-center justify-between;
+
+        > div {
+            &:first-child {
+                @apply w-full lg:w-72 lg:flex-shrink-0;
+            }
+        }
     }
 }

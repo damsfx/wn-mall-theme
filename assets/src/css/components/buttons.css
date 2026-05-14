@@ -1,0 +1,45 @@
+.mall-btn {
+    @apply inline px-6 py-3 text-sm text-center no-underline border rounded shadow cursor-pointer bg-btn-bg border-btn-border whitespace-nowrap min-h-10.5;
+
+    &:hover {
+        @apply bg-btn-bghover;
+    }
+
+    &.mall-btn--primary {
+        @apply text-white bg-primary-500 border-primary-700;
+        @apply hover:bg-primary-600;
+    }
+
+    &.mall-btn--secondary {
+        @apply text-white bg-accent-500 border-accent-700;
+        @apply hover:bg-accent-600;
+    }
+
+    &.mall-btn--link {
+        @apply inline-block text-sm font-bold align-baseline border-0 shadow-none;
+        @apply hover:bg-transparent hover:underline;
+    }
+
+    /* &.mall-btn--text {
+        @apply inline-block p-0 m-0 text-sm align-baseline border-0 shadow-none text-grey;
+        &:hover {
+            @apply bg-transparent text-blue-darker;
+        }
+    } */
+
+    &.mall-btn--full {
+        @apply w-full;
+    }
+
+    &.mall-btn--disabled, &[disabled] {
+        @apply bg-btn-bg border-btn-bg;
+        cursor: no-drop;
+        @apply hover:bg-btn-bg/90;
+    }
+
+    &.mall-btn--sm {
+        @apply px-4 py-2 text-xs;
+        min-height: 0;
+    }
+}
+

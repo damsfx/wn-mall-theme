@@ -10,16 +10,80 @@
  *  Tailwindcss Theme
  *-------------------------------------------------*/
 @theme {
-    --color-primary-50: oklch(0.958 0.016 282.34);
-    --color-primary-100: oklch(0.925 0.03 283.76);
-    --color-primary-200: oklch(0.84 0.064 282);
-    --color-primary-300: oklch(0.763 0.097 281.23);
-    --color-primary-400: oklch(0.68 0.134 278.87);
+    /* Primary - Indigo Dye */
+    --color-primary-50: oklch(0.93 0.01 245.2);  /* #e8edf1 */
+    --color-primary-100: oklch(0.88 0.03 241.8); /* #d1dee9 */
+    --color-primary-200: oklch(0.74 0.03 234.3); /* #a3b6c0 */
+    --color-primary-300: oklch(0.61 0.04 231.2); /* #7492a1 */
+    --color-primary-400: oklch(0.49 0.05 231.1); /* #466d81 */
+    --color-primary-500: oklch(0.41 0.06 235.4); /* #2d5e75 */
+    --color-primary-600: oklch(0.31 0.04 238.2); /* #1d3e4e */
+    --color-primary-700: oklch(0.24 0.03 241.6); /* #142a3a */
+    --color-primary-800: oklch(0.19 0.02 240.2); /* #0d1d27 */
+    --color-primary-900: oklch(0.15 0.01 240.4); /* #0a161f */
 
-    --color-header-background: var(--color-stone-200);
+    /* Accent - Pacific Blue */
+    --color-accent-50: oklch(0.98 0.01 209.6);  /* #f0fbfc */
+    --color-accent-100: oklch(0.92 0.02 216.7); /* #d9edf4 */
+    --color-accent-200: oklch(0.85 0.04 186.2); /* #abdcc9 */
+    --color-accent-300: oklch(0.79 0.07 210.5); /* #81cad8 */
+    --color-accent-400: oklch(0.73 0.10 216.5); /* #57b9d2 */
+    --color-accent-500: oklch(0.66 0.12 222.1); /* #2da7c7 */
+    --color-accent-600: oklch(0.55 0.10 223.7); /* #21869f */
+    --color-accent-700: oklch(0.44 0.08 225.4); /* #1a6477 */
+    --color-accent-800: oklch(0.31 0.06 226.7); /* #124350 */
+    --color-accent-900: oklch(0.24 0.04 227.4); /* #0e313d */
+
+    /* Neutral - Slate */
+    --color-neutral-50: oklch(0.98 0.01 235.9);  /* #f8fafc */
+    --color-neutral-100: oklch(0.96 0.01 243.3); /* #f1f5f9 */
+    --color-neutral-200: oklch(0.92 0.02 241.4); /* #e2e8f0 */
+    --color-neutral-300: oklch(0.85 0.02 241.7); /* #cbd5e1 */
+    --color-neutral-400: oklch(0.69 0.03 241.4); /* #94a3b8 */
+    --color-neutral-500: oklch(0.52 0.03 241.8); /* #64748b */
+    --color-neutral-600: oklch(0.41 0.03 243.1); /* #475569 */
+    --color-neutral-700: oklch(0.33 0.03 244.1); /* #334155 */
+    --color-neutral-800: oklch(0.24 0.03 244.7); /* #1e293b */
+    --color-neutral-900: oklch(0.18 0.02 249.7); /* #0f172a */
+
+    /* Positive - Mantis */
+    --color-positive-50: oklch(0.97 0.02 143.7);  /* #f0f9ec */
+    --color-positive-100: oklch(0.94 0.04 140.4); /* #e1f3dc */
+    --color-positive-200: oklch(0.89 0.07 139.1); /* #c4e8b9 */
+    --color-positive-300: oklch(0.81 0.10 137.9); /* #a7d297 */
+    --color-positive-400: oklch(0.78 0.16 141.0); /* #89d174 */
+    --color-positive-500: oklch(0.73 0.19 140.2); /* #6ec551 */
+    --color-positive-600: oklch(0.60 0.16 141.1); /* #559c41 */
+    --color-positive-700: oklch(0.46 0.12 141.6); /* #417631 */
+    --color-positive-800: oklch(0.32 0.08 141.4); /* #2b4f20 */
+    --color-positive-900: oklch(0.21 0.05 141.7); /* #1a2f10 */
+
+    /* Negative - Flame */
+    --color-negative-50: oklch(0.96 0.02 44.1);   /* #fbefea */
+    --color-negative-100: oklch(0.87 0.07 43.1);  /* #f7d1c4 */
+    --color-negative-200: oklch(0.79 0.11 44.0);  /* #ebae99 */
+    --color-negative-300: oklch(0.70 0.15 42.4);  /* #e08a7f */
+    --color-negative-400: oklch(0.66 0.18 48.0);  /* #de7d54 */
+    --color-negative-500: oklch(0.59 0.22 47.9);  /* #d65d29 */
+    --color-negative-600: oklch(0.48 0.18 47.8);  /* #ae4c21 */
+    --color-negative-700: oklch(0.38 0.14 47.8);  /* #803819 */
+    --color-negative-800: oklch(0.28 0.10 47.8);  /* #562510 */
+    --color-negative-900: oklch(0.18 0.06 47.9);  /* #321508 */
+
+
+    --color-border: var(--color-accent-500);
+    --color-header-bg: var(--color-primary-500);
+    --color-header-text: var(--color-primary-100);
+    --color-footer-bg: var(--color-primary-500);
+    --color-footer-text: var(--color-primary-200);
+
     --color-fields-color: var(--color-stone-500);
-    --color-fields-border: var(--color-stone-200);
+    --color-fields-border: var(--color-border);
     --color-fields-background: var(--color-stone-200);
+
+    --color-btn-bg: white;
+    --color-btn-bghover: var(--color-stone-400);
+    --color-btn-border: var(--color-border);
 
     --background-image-chevron-down: url('./../images/dropdown.svg');
 }
@@ -46,6 +110,7 @@
 @import './layout/layout.css' layer(base);
 @import './layout/header.css' layer(base);
 
+@import './components/buttons.css';
 @import './components/forms.css';
 
 @import './mall/signup.css' layer(base);

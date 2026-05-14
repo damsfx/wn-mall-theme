@@ -2,36 +2,113 @@
  *  Site form fields
  *-------------------------------------------------*/
 
+
+
 @utility base-field {
-    @apply border rounded appearance-none bg-fields-background text-fields-color border-fields-border;
-    min-height: 42.6px;
+    /* @apply border rounded appearance-none bg-fields-background text-fields-color border-fields-border; */
+    @apply mt-1 bg-gray-100 border-gray-500 rounded-md;
 }
 
+
+
+input:where([type='text']),
+input:where(:not([type])),
+input:where([type='email']),
+input:where([type='url']),
+input:where([type='password']),
+input:where([type='number']),
+input:where([type='date']),
+input:where([type='datetime-local']),
+input:where([type='month']),
+input:where([type='search']),
+input:where([type='tel']),
+input:where([type='time']),
+input:where([type='week']),
+input:where([type="checkbox"]),
+input:where([type="radio"]),
+select:where([multiple]),
+textarea,
+select {
+    @apply base-field;
+}
+
+input:where([type='text']),
+input:where(:not([type])),
+input:where([type='email']),
+input:where([type='url']),
+input:where([type='password']),
+input:where([type='number']),
+input:where([type='date']),
+input:where([type='datetime-local']),
+input:where([type='month']),
+input:where([type='search']),
+input:where([type='tel']),
+input:where([type='time']),
+input:where([type='week']),
+select:where([multiple]),
+textarea,
+select {
+    @apply block w-full focus:focus:bg-white focus:ring-0;
+}
+
+label {
+    @apply inline-flex items-center gap-2;
+
+    > span {
+        @apply leading-none;
+    }
+}
+
+.mall-two-fields {
+    @apply flex gap-4 mb-6;
+
+    .mall-form-control,
+    input {
+        @apply mb-0;
+    }
+
+    > div {
+        @apply flex-1/2;
+    }
+}
+
+.mall-selectbox-sm {
+    @apply p-1 pr-8 text-xs;
+    /* @apply text-xs p-1 bg-size-[1.2em] bg-position-[right_.75em_top_50%] max-w-15; */
+}
+
+/*
 @utility base-input {
     @apply base-field;
     @apply block w-full px-4 py-3 mb-3;
-    min-height: 42.6px;
 }
 
 @utility dropdown-pointer {
     @apply bg-chevron-down bg-no-repeat bg-size-[1.5em] bg-position-[right_1em_top_50%];
 }
 
-@utility mall-selectbox {
+@utility base-select {
     @apply base-field;
-    @apply px-2 py-3 pr-8 text-sm dropdown-pointer;
+    @apply text-sm pr-8! dropdown-pointer;
 }
+
 @utility mall-label {
     @apply block mb-2 text-xs font-bold tracking-wide uppercase text-fields-color;
 }
 
 @layer components {
+    .mall-selectbox {
+        @apply base-select;
+        @apply px-2 py-3;
+    }
     .mall-selectbox-sm {
-        @apply mall-selectbox py-1 px-1 pr-8 bg-size-[1.2em] bg-position-[right_.75em_top_50%] max-w-15;
+        @apply base-select;
+        @apply text-xs p-1 bg-size-[1.2em] bg-position-[right_.75em_top_50%] max-w-15;
     }
 
     .mall-input {
         @apply base-input;
+        min-height: 42.6px;
     }
 
     .mall-input.mall-input-sm {
@@ -70,7 +147,7 @@
             @apply base-input;
         }
         select {
-            @apply w-full cursor-pointer mall-selectbox;
+            @apply w-full cursor-pointer base-select;
         }
     }
 
@@ -90,18 +167,6 @@
         }
     }
 
-    .mall-two-fields {
-        @apply flex gap-4 mb-6;
-
-        .mall-form-control,
-        input {
-            @apply mb-0;
-        }
-
-        > div {
-            @apply flex-1/2;
-        }
-    }
 
     .mall-checkbox {
         @apply block font-bold text-stone-700;
@@ -119,4 +184,4 @@
     .mall-form-comment {
         @apply mb-4 text-xs text-stone-600;
     }
-}
+} */
