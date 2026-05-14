@@ -1,0 +1,117 @@
+/*-------------------------------------------------
+ *  Mall product wish lists
+ *-------------------------------------------------*/
+/*
+.mall-wishlists-manager {
+    display: flex;
+    &__lists {
+        width: 350px;
+    }
+    &__contents {
+        flex: 1 1 auto;
+        @apply p-8 bg-gray-lightest;
+    }
+    &__header {
+        @apply mb-8;
+    }
+    &__well {
+        @apply flex-1 bg-white rounded shadow;
+    }
+    &__input {
+        @apply w-full px-0 py-2 text-lg border-b border-gray;
+        background: transparent;
+        flex: 1 1 auto;
+    }
+    &__form {
+        display: flex;
+    }
+    &__action-button {
+        flex: 1 1 60px;
+        margin-left: 20px;
+    }
+    &__actions {
+        text-align: right;
+        @apply mt-8;
+        .mall-btn {
+            @apply ml-4;
+        }
+    }
+    .mall-trash-icon {
+        width: 14px;
+        @apply fill-current text-gray;
+    }
+    .mall-wishlist-empty {
+        @apply p-4;
+        text-align: center;
+    }
+}
+*/
+
+.mall-wishlist-button {
+    position: relative;
+
+    .mall-wishlist-button__popup {
+        @apply text-xs translate-y-5 opacity-0;
+        pointer-events: none;
+        transition: .2s ease-out;
+        transition-property: transform, opacity;
+    }
+    .mall-wishlist-button__popup--visible {
+        @apply opacity-100;
+        pointer-events: initial;
+        transform: translateY(0px);
+    }
+    .mall-wishlist-button__popup-inner {
+        @apply absolute left-0 w-full overflow-hidden bg-white rounded shadow-md -bottom-1;
+    }
+    .mall-wishlist-button__new {
+        @apply relative block px-4 py-3 m-4 rounded border-gray;
+        border: 1px dashed;
+    }
+    .mall-wishlist-button__name-input {
+        @apply block w-full text-xs text-center;
+    }
+    .mall-wishlist-button__new-label {
+        @apply absolute w-full text-center left-1/2 top-1/2 text-gray -translate-1/2;
+        pointer-events: none;
+    }
+}
+
+.mall-wishlists {
+    width: 100%;
+
+    .mall-wishlists--height-limited {
+        overflow-y: auto;
+        max-height: 400px;
+    }
+}
+
+.mall-wishlist-item {
+    @apply flex gap-4 p-4 cursor-pointer;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    .mall-wishlist-item--active {
+        @apply bg-gray-lightest;
+    }
+
+    .mall-wishlist-item__data {
+        @apply grow;
+
+        .mall-wishlist-item__description {
+            @apply mt-1 text-gray;
+        }
+    }
+
+    .mall-wishlist-item__meta {
+        @apply shrink;
+
+        text-align: right;
+        flex: 0 0 auto;
+    }
+}
+
+.mall-add-to-wishlist-button {
+    @apply mt-1;
+}

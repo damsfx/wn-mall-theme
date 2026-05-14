@@ -74,12 +74,13 @@
     --aspect-logo: 500/142;
 
     --color-gray: var(--color-gray-500);
+    --color-gray-lightest: var(--color-gray-200);
     --color-gray-light: var(--color-gray-300);
     --color-gray-dark: var(--color-gray-700);
     --color-gray-darker: var(--color-gray-800);
     --color-gray-darkest: var(--color-gray-900);
-    --color-smoke: var(--color-stone-200);
-    --color-smoke-light: var(--color-stone-100);
+    --color-smoke: var(--color-stone-300);
+    --color-smoke-light: var(--color-stone-200);
 
     --color-border: var(--color-accent-500);
     --color-header-bg: var(--color-primary-500);
@@ -135,3 +136,4 @@
 @import './mall/pagination.css';
 @import './mall/reviews.css';
 @import './mall/signup.css';
+@import './mall/wishlists.css';

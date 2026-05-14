@@ -7,34 +7,49 @@
     @apply bg-btn-bg border-btn-border hover:bg-btn-bghover;
 }
 
+@utility btn-primary {
+    @apply text-white bg-accent-500 border-accent-700;
+    @apply hover:bg-accent-600;
+}
+@utility btn-secondary {
+    @apply text-white bg-accent-700 border-accent-800;
+    @apply hover:bg-accent-800;
+}
+@utility btn-link {
+    @apply inline-block text-sm font-bold align-baseline border-0 shadow-none;
+    @apply hover:bg-transparent hover:underline;
+}
+@utility btn-text {
+    @apply inline-block p-0 m-0 text-sm align-baseline bg-transparent border-0 shadow-none text-neutral-800;
+    @apply hover:bg-transparent hover:text-cyan-900;
+}
+@utility btn-disabled {
+    @apply cursor-not-allowed bg-btn-bg/50 border-btn-bg text-neutral-400;
+    @apply hover:bg-btn-bg/60;
+}
+
 .btn,
 .mall-btn {
-@apply base-btn;
+    @apply base-btn;
 
     &.btn--primary,
     &.mall-btn--primary {
-        @apply text-white bg-accent-500 border-accent-700;
-        @apply hover:bg-accent-600;
+        @apply btn-primary;
     }
 
     &.btn--secondary,
     &.mall-btn--secondary {
-        @apply text-white bg-accent-700 border-accent-800;
-        @apply hover:bg-accent-800;
+        @apply btn-secondary;
     }
 
     &.btn--link,
     &.mall-btn--link {
-        @apply inline-block text-sm font-bold align-baseline border-0 shadow-none;
-        @apply hover:bg-transparent hover:underline;
+        @apply btn-link;
     }
 
     &.btn--text,
     &.mall-btn--text {
-        @apply inline-block p-0 m-0 text-sm align-baseline bg-transparent border-0 shadow-none text-neutral-800;
-        &:hover {
-            @apply bg-transparent text-cyan-900;
-        }
+        @apply btn-text;
     }
 
     &.btn--full,
@@ -44,8 +59,7 @@
 
     &.btn--disabled,
     &.mall-btn--disabled, &[disabled] {
-        @apply cursor-not-allowed bg-btn-bg/50 border-btn-bg text-neutral-400;
-        @apply hover:bg-btn-bg/60;
+        @apply btn-disabled;
     }
 
     &.btn--sm,

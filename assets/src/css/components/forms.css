@@ -51,7 +51,7 @@ label {
 }
 
 .mall-two-fields {
-    @apply flex gap-4 mb-6;
+    @apply flex gap-4;
 
     .mall-form-control,
     input {

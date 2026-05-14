@@ -6,7 +6,7 @@
     @apply py-1 border-b-4 bg-header-bg text-header-text border-border;
 
     > .container {
-        @apply flex items-center justify-between text-sm ;
+        @apply flex items-center justify-between text-xs;
 
         > div {
             &:last-child {
@@ -15,7 +15,7 @@
         }
 
         :where(select) {
-            @apply bg-header-text/20!;
+            @apply bg-transparent! border-0!;
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='oklch(0.88 0.03 241.8)' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
         }
     }
