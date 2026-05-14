@@ -58,10 +58,21 @@ header {
                 @apply w-24;
 
                 > a {
-                    @apply flex flex-col items-center justify-center no-underline text-primary hover:text-secondary hover:font-bold;
+                    @apply relative flex flex-col items-center justify-center no-underline text-primary/75 hover:text-primary hover:font-bold;
 
                     > svg {
                         @apply w-6 mb-2 fill-current;
+                    }
+
+                    .mall-cart-count {
+                        @apply absolute left-[calc(50%+var(--spacing))] -top-2 grid text-xs leading-4 text-white bg-red-500 rounded-full size-4 aspect-square place-items-center;
+
+                    }
+
+                    &:has(.mall-cart-count) {
+                        &:not(:has(.mall-cart-count.invisible)) {
+                            @apply text-primary;
+                        }
                     }
                 }
             }

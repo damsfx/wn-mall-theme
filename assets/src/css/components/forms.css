@@ -45,16 +45,16 @@ input:where([type='week']),
 select:where([multiple]),
 textarea,
 select {
+    --size: calc(var(--size-field, 0.25rem) * 10);
+
     @apply w-full gap-2 px-3 mt-1 appearance-none shrink whitespace-nowrap;
     @apply h-(--size);
 
-    --size: calc(var(--size-field, 0.25rem) * 10);
-
     &:focus,
     &:focus-within {
-        @apply isolate outline-offset-2;
-
         --input-color: var(--color-accent);
+
+        @apply isolate outline-offset-2;
         box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
         outline: 2px solid var(--input-color);
     }
@@ -66,14 +66,17 @@ textarea {
 
 input:where([type="checkbox"]),
 input:where([type="radio"]) {
-    @apply size-(--size);
-
     --size: calc(var(--size-field, 0.25rem) * 5);
+
+    @apply size-(--size);
 
     &:checked,
     &[aria-checked="true"] {
-        background-color: var(--input-color, #0000);
+        background-color: var(--color-primary, #0000);
     }
+}
+input:where([type="radio"]) {
+    @apply rounded-full;
 }
 
 label {
@@ -99,6 +102,7 @@ label {
 
 .mall-selectbox-sm {
     @apply p-1 pr-8 text-xs;
+    --size: calc(var(--size-field, 0.25rem) * 6);
 }
 
 /*

@@ -1,10 +1,9 @@
 [cart]
 ==
-{% set count = cart.cart.products.count %}
-
+{% set count = cart.cart.products.count ?: cart.products.count %}
 <div>
-    <a href="{{ 'cart' | page }}" class="flex flex-col items-center justify-center">
-        <div class="mall-cart-count absolute bg-red text-white text-2xs rounded px-1 leading-normal ml-4 -mt-8 {{ count < 1 ? 'invisible' : '' }}">
+    <a href="{{ 'shop/cart' | page }}">
+        <div class="mall-cart-count{{ count < 1 ? ' invisible' : '' }}">
             {{ count }}
         </div>
         <svg viewBox="0 0 20 20" version="1.1">

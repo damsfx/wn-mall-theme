@@ -40,6 +40,7 @@
 @import './components/buttons.css';
 @import './components/forms.css';
 
+@import './mall/cart.css';
 @import './mall/layout.css';
 @import './mall/loader.css';
 @import './mall/product.css';
@@ -49,5 +50,7 @@
 @import './mall/reviews.css';
 @import './mall/signup.css';
 @import './mall/wishlists.css';
+
 @import './mall/components/callouts.css' layer(components);
 @import './mall/components/forms.css' layer(components);
+@import './mall/components/modal.css' layer(components);

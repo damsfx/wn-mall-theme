@@ -15,9 +15,12 @@
         @variant @xl/products {
             @apply grid-cols-3 gap-4;
         }
+        /*
+        Disbaled as settings for comopents get 9 products, must stay on a multiple of 3
         @variant @3xl/products {
             @apply grid-cols-4 gap-6;
         }
+        */
     }
 
     .mall-products-empty {

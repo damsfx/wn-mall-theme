@@ -139,16 +139,18 @@
     }
 }
 
+/*
+    Product services pop-up
+ */
 .mall-product-service {
     &:not(:last-child) {
-        margin-bottom: 4rem;
+        @apply mb-12;
     }
     .mall-product-service__name {
-        margin-bottom: 1rem;
+        @apply mb-3 font-semibold;
     }
     .mall-product-service__description {
-        @apply text-sm text-base-content;
-        margin-bottom: 1rem;
+        @apply mb-4 text-sm text-base-content;
     }
     .mall-product-service__required {
         @apply mb-4 text-sm;
@@ -160,42 +162,41 @@
 }
 
 .mall-product-service-options {
-    @apply border-b border-base-100;
-}
+    @apply border-b border-base-200;
 
-.mall-product-service-option {
-    @apply text-sm border-t border-base-100 text-base-300;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 15px 0;
+    .mall-product-service-option {
+        @apply flex flex-wrap px-0 py-4 text-sm border-t border-base-200;
 
-    .mall-product-service-option__radio {
-        flex: 0 1 40px;
-    }
-    .mall-product-service-option__name {
-        flex: 1 1 auto;
-    }
-    .mall-product-service-option__price {
-        flex: 1 0 100px;
-        text-align: right;
-        font-weight: bold;
-    }
-    .mall-product-service-option__description {
-        @apply text-xs text-base-content;
-        margin-top: .5rem;
-        padding-left: 40px;
-        padding-right: 100px;
-        flex: 1 0 100%;
+        .mall-product-service-option__radio {
+            @apply flex-[0,1,40px];
+        }
+        .mall-product-service-option__name {
+            @apply flex-[1,1,auto];
+        }
+        .mall-product-service-option__price {
+            @apply font-bold text-right;
+            @apply flex-[1,0,100px];
+        }
+        .mall-product-service-option__description {
+            @apply pl-10 mt-2 text-xs text-base-content pr-[100px];
+            @apply flex-[1,0,100%];
+            /*
+            margin-top: .5rem;
+            padding-left: 40px;
+            padding-right: 100px;
+            flex: 1 0 100%;
+            */
+        }
     }
 }
 
 .mall-product-service-error {
-    @apply p-4 text-sm text-center rounded bg-error/50;
-    margin-left: 0;
-    margin-top: 2rem;
+    @apply p-4 pt-8 ml-0 text-sm text-center rounded bg-error/50;
 }
 
-
+/*
+    Product related bottom page products
+ */
 .mall-product-related {
 
     .mall-products__products {
