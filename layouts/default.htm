@@ -34,7 +34,7 @@ forceUrl = 1
     <meta name="description" content="{{ this.page.meta_description }}">
     <title>{{ this.page.title }}</title>
 
-    {{ vite(['assets/src/css/theme.css'], 'theme-mall') }}
+    {{ vite(['assets/src/css/app.css'], 'theme-mall') }}
     {% styles %}
 
     <script src="{{ ['@jquery'] | theme }}"></script>
@@ -49,15 +49,15 @@ forceUrl = 1
         <div class="prose max-w-none">
             {% page %}
         </div>
-
-        {% if this.page.id == 'index' %}
-            {% partial 'home-products.htm'
-                perPage=5
-                sort="random"
-                showbutton=1
-            %}
-        {% endif %}
     </main>
+
+    {% if this.page.id == 'index' %}
+        {% partial 'home-products.htm'
+            perPage=4
+            sort="random"
+            showbutton=1
+        %}
+    {% endif %}
 
     {% partial 'footer' %}
     {#

@@ -20,8 +20,14 @@ input:where([type="radio"]),
 select:where([multiple]),
 textarea,
 select {
-    @apply mt-1 border-gray-300 rounded-md;
+    @apply relative block bg-base-200;
+    @apply rounded-(--radius-field) border-(--input-color);
+
+    font-size: max(var(--font-size, 0.875rem), 0.875rem);
+
+    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
 }
+
 
 input:where([type='text']),
 input:where(:not([type])),
@@ -39,7 +45,35 @@ input:where([type='week']),
 select:where([multiple]),
 textarea,
 select {
-    @apply block w-full bg-gray-100 focus:focus:bg-white focus:ring-0;
+    @apply w-full gap-2 px-3 mt-1 appearance-none shrink whitespace-nowrap;
+    @apply h-(--size);
+
+    --size: calc(var(--size-field, 0.25rem) * 10);
+
+    &:focus,
+    &:focus-within {
+        @apply isolate outline-offset-2;
+
+        --input-color: var(--color-accent);
+        box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
+        outline: 2px solid var(--input-color);
+    }
+}
+
+textarea {
+    @apply min-h-20;
+}
+
+input:where([type="checkbox"]),
+input:where([type="radio"]) {
+    @apply size-(--size);
+
+    --size: calc(var(--size-field, 0.25rem) * 5);
+
+    &:checked,
+    &[aria-checked="true"] {
+        background-color: var(--input-color, #0000);
+    }
 }
 
 label {
@@ -65,7 +99,6 @@ label {
 
 .mall-selectbox-sm {
     @apply p-1 pr-8 text-xs;
-    /* @apply text-xs p-1 bg-size-[1.2em] bg-position-[right_.75em_top_50%] max-w-15; */
 }
 
 /*

@@ -14,7 +14,7 @@
         }
 
         .mall-property-group__name {
-            @apply pb-1 mb-4 border-b border-stone-300;
+            @apply pb-1 mb-4 border-b border-base-300;
 
             .mall-property-group--price {
                 @apply flex;
@@ -26,7 +26,7 @@
         }
 
         .mall-property-group__description {
-            @apply mb-4 -mt-2 text-xs text-gray-dark;
+            @apply mb-4 -mt-2 text-xs text-accent;
         }
     }
 
@@ -47,7 +47,7 @@
             @apply justify-end text-xs font-normal text-right;
 
             a {
-                @apply no-underline text-gray;
+                @apply no-underline text-secondary-content;
             }
         }
     }
@@ -56,11 +56,11 @@
         @apply flex flex-wrap gap-2;
 
         .mall-filter__option {
-            @apply p-2 text-sm text-center cursor-pointer bg-smoke;
+            @apply p-2 text-sm text-center cursor-pointer bg-base-200;
             min-width: 40px;
 
             .mall-filter__option--selected:not(.mall-label--checkbox) {
-                @apply text-white bg-primary-500;
+                @apply text-white bg-primary;
             }
         }
 
@@ -81,7 +81,7 @@
 
         /* noUi Slider */
         .noUi-connect {
-            @apply bg-primary-900;
+            @apply bg-secondary;
         }
         .noUi-horizontal {
             height: 10px;
@@ -119,10 +119,6 @@
         .noUi-pips-horizontal {
             height: 20px;
             padding: 10px 0 0;
-        }
-
-        .noUi {
-            @apply bg-primary-200;
         }
     }
 

@@ -4,15 +4,16 @@
 
 .home-products {
 
+    @apply bg-primary-50;
+
     .mall-products {
 
         .mall-products__products {
-            @apply grid grid-cols-5 my-10;
+            /* @apply grid lg:grid-cols-4! my-10!; */
         }
 
         .mall-products-item {
-            width: unset;
+            @apply bg-white;
         }
-
     }
 }

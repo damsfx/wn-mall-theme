@@ -1,0 +1,11 @@
+/*-------------------------------------------------
+ *  Mall specific components
+ *-------------------------------------------------*/
+
+.mall-callout {
+    @apply px-4 py-6 mb-8 text-sm text-center bg-warning/30 text-warning;
+}
+
+.mall-callout--neutral {
+    @apply bg-base-100 text-neutral;
+}

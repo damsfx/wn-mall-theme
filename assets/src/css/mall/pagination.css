@@ -11,17 +11,17 @@
     span,
     a {
         @apply inline-block p-2 text-sm leading-none text-center no-underline size-8;
-        @apply hover:bg-neutral-200;
+        @apply hover:bg-base-200;
     }
 
     .disabled > a,
     .disabled > span {
-        @apply text-gray-400;
+        @apply text-base-content;
     }
 
     .active > a,
     .active > span {
-        @apply text-primary-500 bg-neutral-300 border-primary-500;
+        @apply text-primary bg-base-300 border-primary;
     }
 
 }

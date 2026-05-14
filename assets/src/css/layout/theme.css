@@ -1,15 +1,38 @@
-
 /*-------------------------------------------------
- *  Tailwindcss
- *-------------------------------------------------*/
-@import 'tailwindcss';
-@plugin "@tailwindcss/forms";
-@plugin "@tailwindcss/typography";
-
-/*-------------------------------------------------
- *  Tailwindcss Theme
+ *  Tailwindcss Winter.Mall heme
  *-------------------------------------------------*/
 @theme {
+    --background-image-logo: url('./../../../images/logo.webp');
+    --aspect-logo: 500/142;
+
+    --color-base-100: oklch(97% 0.001 106.424);
+    --color-base-200: oklch(92% 0.003 48.717);
+    --color-base-300: oklch(86% 0.005 56.366);
+    --color-base-content: oklch(37% 0.01 67.558);
+    --color-primary: oklch(0.41 0.06 235.4);
+    --color-primary-content: oklch(0.88 0.03 241.8);
+    --color-secondary: oklch(0.73 0.10 216.5);
+    --color-secondary-content: oklch(37% 0.044 257.287);
+    --color-accent: oklch(0.69 0.03 241.4);
+    --color-accent-content: oklch(0.24 0.03 244.7);
+    --color-neutral: oklch(43% 0 0);
+    --color-neutral-content: oklch(87% 0 0);
+    --color-info: oklch(74% 0.16 232.661);
+    --color-info-content: oklch(29% 0.066 243.157);
+    --color-success: oklch(0.73 0.19 140.2);
+    --color-success-content: oklch(0.21 0.05 141.7);
+    --color-warning: oklch(82% 0.189 84.429);
+    --color-warning-content: oklch(41% 0.112 45.904);
+    --color-error: oklch(0.59 0.22 47.9);
+    --color-error-content: oklch(100% 0 0);
+    --radius-selector: 0.5rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 0;
+
     /* Primary - Indigo Dye */
     --color-primary-50: oklch(0.93 0.01 245.2);  /* #e8edf1 */
     --color-primary-100: oklch(0.88 0.03 241.8); /* #d1dee9 */
@@ -70,70 +93,9 @@
     --color-negative-800: oklch(0.28 0.10 47.8);  /* #562510 */
     --color-negative-900: oklch(0.18 0.06 47.9);  /* #321508 */
 
-    --background-image-logo: url('./../../images/logo.webp');
-    --aspect-logo: 500/142;
-
-    --color-gray: var(--color-gray-500);
-    --color-gray-lightest: var(--color-gray-200);
-    --color-gray-light: var(--color-gray-300);
-    --color-gray-dark: var(--color-gray-700);
-    --color-gray-darker: var(--color-gray-800);
-    --color-gray-darkest: var(--color-gray-900);
-    --color-smoke: var(--color-stone-300);
-    --color-smoke-light: var(--color-stone-200);
-
-    --color-border: var(--color-accent-500);
-    --color-header-bg: var(--color-primary-500);
-    --color-header-text: var(--color-primary-100);
-    --color-footer-bg: var(--color-primary-500);
-    --color-footer-bg2: var(--color-primary-600);
-    --color-footer-text: var(--color-primary-200);
-
-    --color-fields-color: var(--color-stone-500);
-    --color-fields-border: var(--color-border);
-    --color-fields-background: var(--color-stone-200);
-
-    --color-btn-bg: var(--color-accent-100);
-    --color-btn-bghover: var(--color-accent-200);
-    --color-btn-border: var(--color-accent-400);
-
-    --background-image-chevron-down: url('./../images/dropdown.svg');
+    /* Layout */
+    --color-bar: var(--color-primary-500);
+    --color-bar2: var(--color-primary-600);
+    --color-bar-content: var(--color-primary-100);
+    --color-bar-border: var(--color-accent-400);
 }
-
-/*-------------------------------------------------
- *  Tailwindcss custom variants & utilities
- *-------------------------------------------------*/
-@custom-variant dark (&:where(.dark, .dark *, [data-theme=dark], [data-theme=dark] *));
-
-@utility container {
-    margin-inline: auto;
-    padding-inline: 1.5rem;
-
-    @variant lg {
-        padding-inline: 1rem;
-    }
-}
-
-/*-------------------------------------------------
- *  Layout
- *-------------------------------------------------
- @import './layout/typography.css' layer(base);
- */
-@import './layout/layout.css' layer(base);
-@import './layout/header.css' layer(base);
-@import './layout/navigation.css' layer(base);
-
-@import './components/buttons.css';
-@import './components/forms.css';
-
-@import './pages/home.css' layer(base);
-
-@import './mall/layout.css';
-@import './mall/loader.css';
-@import './mall/product.css';
-@import './mall/products.css';
-@import './mall/productsfilter.css';
-@import './mall/pagination.css';
-@import './mall/reviews.css';
-@import './mall/signup.css';
-@import './mall/wishlists.css';

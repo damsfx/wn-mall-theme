@@ -11,13 +11,9 @@ perPage = "{{ perPage }}"
 paginate = 0
 sort = "{{ sort }}"
 ==
-<section class="home-products">
-
-
-
-    <div class="container pb-6 prose max-w-none lg:prose-lg">
+<section class="prose home-products max-w-none lg:prose-lg">
+    <div class="container pb-6">
         <h2>{{ 'home.latest_products.title' | _ }}</h2>
-
         {% if description %}
             <p class="text-center text-primary">{{ description }}</p>
         {% endif %}
@@ -26,13 +22,8 @@ sort = "{{ sort }}"
 
         {% if showbutton != '0' %}
         <div class="text-center">
-            <a href="{{ 'shop/index' | page }}" class="btn btn--primary">Tous nos produits</a>
+            <a href="{{ 'shop/index' | page }}" class="btn btn--primary">{{ 'home.latest_products.button' | _ }}</a>
         </div>
         {% endif %}
     </div>
 </section>
-{% put scripts %}
-<style>
-
-</style>
-{% endput %}

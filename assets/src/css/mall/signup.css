@@ -7,7 +7,7 @@
 
     .mall-signup__signup,
     .mall-signup__signin {
-        @apply px-4 py-2 border rounded lg:px-8 lg:py-4 border-fields-border;
+        @apply px-4 py-2 border rounded lg:px-8 lg:py-4 border-base-300;
 
         form,
         .mall-signup__billing-address,
@@ -18,6 +18,9 @@
 
     :where(h3) {
         @apply mt-0!;
+    }
+    input:where([type="checkbox"]) {
+        --input-color: var(--color-secondary-content);
     }
 
     .mall-signup__billing-address,
@@ -39,6 +42,10 @@
     }
 
     .mall-signup-terms {
-        @apply px-4 py-3 my-4 border rounded bg-fields-background border-fields-border;
+        @apply px-4 py-3 my-4 border rounded bg-base-200 border-accent;
+
+        input {
+            --input-color: var(--color-success);
+        }
     }
 }

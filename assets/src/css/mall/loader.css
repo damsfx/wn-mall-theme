@@ -9,7 +9,6 @@
 
     > svg {
         @apply size-18 lg:size-24;
-
-        stroke: var(--color-accent-600);
+        stroke: var(--color-secondary);
     }
 }

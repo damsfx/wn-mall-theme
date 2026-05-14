@@ -65,14 +65,14 @@
         @apply absolute left-0 w-full overflow-hidden bg-white rounded shadow-md -bottom-1;
     }
     .mall-wishlist-button__new {
-        @apply relative block px-4 py-3 m-4 rounded border-gray;
+        @apply relative block px-4 py-3 m-4 rounded border-neutral;
         border: 1px dashed;
     }
     .mall-wishlist-button__name-input {
         @apply block w-full text-xs text-center;
     }
     .mall-wishlist-button__new-label {
-        @apply absolute w-full text-center left-1/2 top-1/2 text-gray -translate-1/2;
+        @apply absolute w-full text-center left-1/2 top-1/2 text-neutral -translate-1/2;
         pointer-events: none;
     }
 }
@@ -93,14 +93,14 @@
 
     &:hover,
     .mall-wishlist-item--active {
-        @apply bg-gray-lightest;
+        @apply bg-base-200;
     }
 
     .mall-wishlist-item__data {
         @apply grow;
 
         .mall-wishlist-item__description {
-            @apply mt-1 text-gray;
+            @apply mt-1 text-neutral;
         }
     }
 

@@ -3,9 +3,9 @@
     "file": "images/logo-CeUWxChR.webp",
     "src": "assets/images/logo.webp"
   },
-  "assets/src/css/theme.css": {
-    "file": "css/theme-Iuowd9hR.css",
-    "src": "assets/src/css/theme.css",
+  "assets/src/css/app.css": {
+    "file": "css/app-BrgWZ2xJ.css",
+    "src": "assets/src/css/app.css",
     "isEntry": true
   },
   "assets/src/js/app.js": {

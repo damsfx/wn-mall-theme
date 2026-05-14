@@ -6,9 +6,7 @@
     @apply flex gap-4 lg:gap-8;
 
     /* Global layout */
-
     .mall-product__info {
-        /* @apply w-3/5 pr-8; */
         @apply grow;
 
         > h2 {
@@ -19,10 +17,10 @@
         @apply min-w-1/4;
     }
     .mall-product__images {
-        @apply flex flex-wrap;
+        @apply flex flex-wrap gap-4;
 
         .mall-product__image {
-            @apply flex p-2 mb-4 mr-4 border-2 border-gray-light;
+            @apply flex p-2 border-2 border-base-200;
             width: calc(100% / 3 - 1rem);
 
             &:nth-child(3n) {
@@ -30,8 +28,7 @@
             }
 
             img {
-                @apply block;
-                object-fit: contain;
+                @apply block object-contain size-full my-0!;
             }
         }
     }
@@ -71,18 +68,18 @@
     }
 
     .mall-product__properties-heading {
-        @apply pb-1 mt-4 mb-2 border-b border-gray-light;
+        @apply pb-1 mt-4 mb-2 border-b border-base-300;
     }
 
     .mall-product__custom-fields {
         @apply mb-8;
         .mall-option-selector {
-            @apply inline-block border-2 border-gray-light;
+            @apply inline-block border-2 border-base-200;
             width: 24px;
             height: 24px;
 
             &.is-active {
-                @apply shadow border-gray-dark;
+                @apply shadow border-base-300;
             }
 
             img {
@@ -92,35 +89,37 @@
     }
 
     .mall-product__price {
-        @apply pt-4 border-t border-smoke-light;
+        @apply pt-4 border-t border-base-200;
     }
 
     .mall-product__old-price {
-        @apply mb-1 text-sm font-bold text-red-500 line-through;
+        @apply mb-1 text-sm font-bold line-through text-error;
     }
 
     .mall-product__current-price {
-        @apply text-2xl font-bold text-black;
+        @apply text-2xl font-bold text-base-content;
     }
 
     .mall-product__tax-info {
-        @apply mt-2 mb-4 text-xs text-gray;
+        @apply mt-2 mb-4 text-xs text-neutral;
     }
 
     .mall-product__property-stock {
-        @apply mt-2 text-xs text-gray;
+        @apply mt-2 text-xs text-neutral;
     }
 
     .mall-product__add-to-cart-form {
         @apply grid gap-4;
-        @apply pt-4 border-t border-smoke-light;
+        @apply pt-4 border-t border-base-200;
     }
 }
 
 .mall-add-to-cart-button {
-    @apply w-full font-bold uppercase base-btn btn-primary text-shadow-md;
-    transition: .1s ease background;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
+    @apply base-btn;
+    @apply w-full font-bold uppercase text-shadow-md;
+
+    --btn-color: var(--color-primary);
+    --btn-fg: var(--color-primary-content);
 }
 
 
@@ -137,7 +136,7 @@
         margin-right: 6px;
         @apply border-2;
         &.is-active {
-            @apply border-primary-500;
+            @apply border-primary;
         }
     }
 }
@@ -150,26 +149,24 @@
         margin-bottom: 1rem;
     }
     .mall-product-service__description {
-        @apply text-sm text-gray-darkest;
+        @apply text-sm text-base-content;
         margin-bottom: 1rem;
     }
     .mall-product-service__required {
-        @apply text-sm;
-        margin-bottom: 1rem;
-        /* @apply text-blue-darker; */
+        @apply mb-4 text-sm;
 
         &[data-validate-for] {
-            margin-left: 0;
+            @apply ml-0;
         }
     }
 }
 
 .mall-product-service-options {
-    @apply border-b border-gray-light;
+    @apply border-b border-base-100;
 }
 
 .mall-product-service-option {
-    @apply text-sm border-t border-gray-light text-gray-darkest;
+    @apply text-sm border-t border-base-100 text-base-300;
     display: flex;
     flex-wrap: wrap;
     padding: 15px 0;
@@ -186,7 +183,7 @@
         font-weight: bold;
     }
     .mall-product-service-option__description {
-        @apply text-xs text-gray-darker;
+        @apply text-xs text-base-content;
         margin-top: .5rem;
         padding-left: 40px;
         padding-right: 100px;
@@ -195,7 +192,7 @@
 }
 
 .mall-product-service-error {
-    @apply p-4 text-sm text-center bg-red-300 rounded;
+    @apply p-4 text-sm text-center rounded bg-error/50;
     margin-left: 0;
     margin-top: 2rem;
 }

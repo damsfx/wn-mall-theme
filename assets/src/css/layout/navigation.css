@@ -15,13 +15,12 @@
 
     .nav-item {
         @apply block mt-4 lg:m-0;
-        @apply text-gray-600 hover:text-gray-900;
+        @apply text-primary/80 hover:text-primary;
 
         &:hover,
         &:has(.active) {
-            @apply text-gray-900;
+            @apply text-primary;
         }
-
 
         > a {
             @apply no-underline;

@@ -3,4 +3,7 @@
 # Work with Winter.Translate plugin
 # -----------------------------------
 
-home.latest_products.title: 'Latest products'
+site.footer.copyright: 'Cette boutique de démonstration utilise le plugin :plugin-link pour :winter-link.'
+
+home.latest_products.title: 'Nouveautés'
+home.latest_products.button: 'Tous nos produits'

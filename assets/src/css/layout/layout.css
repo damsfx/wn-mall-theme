@@ -12,8 +12,8 @@ body {
 
 
 footer {
-    @apply py-6 grow text-footer-text border-t-6 border-border;
-    @apply bg-footer-bg bg-linear-to-bl from-footer-bg to-footer-bg2;
+    @apply py-6 grow text-bar-content border-t-6 border-bar-border;
+    @apply bg-bar bg-linear-to-bl from-bar to-bar2;
 
     :where(a) {
         @apply underline text-accent-400;

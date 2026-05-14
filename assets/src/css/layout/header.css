@@ -3,7 +3,7 @@
  *-------------------------------------------------*/
 
 .top-bar {
-    @apply py-1 border-b-4 bg-header-bg text-header-text border-border;
+    @apply py-1 border-b-4 bg-bar text-bar-content border-bar-border;
 
     > .container {
         @apply flex items-center justify-between text-xs;

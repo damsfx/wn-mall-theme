@@ -1,0 +1,7 @@
+/*-------------------------------------------------
+ *  UI test page specific styles
+ *-------------------------------------------------*/
+
+.badge {
+    @apply inline-block border rounded border-black/16 size-8;
+}

@@ -3,69 +3,232 @@
  *-------------------------------------------------*/
 
 @utility base-btn {
-    @apply inline px-6 py-3 text-sm text-center no-underline border rounded shadow cursor-pointer whitespace-nowrap;
-    @apply bg-btn-bg border-btn-border hover:bg-btn-bghover;
+    @apply inline-flex shrink-0 cursor-pointer flex-nowrap items-center justify-center gap-1.5 text-center align-middle outline-offset-2 select-none;
+    @apply px-(--btn-p) bg-(--btn-bg) text-(--btn-fg) h-(--size) text-(length:--fontsize,0.875rem) font-semibold border-solid border-(length:--border) border-(--btn-border) rounded-(--radius-field);
+
+    outline-color: var(--btn-color, var(--color-base-content));
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 0.2s;
+
+    --tw-prose-links: var(--btn-fg);
+    --size: calc(var(--size-field, 0.25rem) * 10);
+    --btn-bg: var(--btn-color, var(--color-base-200));
+    --btn-fg: var(--color-base-content);
+    --btn-p: 1rem;
+    --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
+
+    @media (hover: hover) {
+        &:hover {
+            --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+        }
+    }
+
+    &:focus-visible,
+    &:has(:focus-visible) {
+        @apply outline-2 isolate outline-solid;
+    }
+
+    &:active:not(.btn-active) {
+        translate: 0 0.5px;
+        --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
+        --btn-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+        --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
+    }
 }
 
-@utility btn-primary {
-    @apply text-white bg-accent-500 border-accent-700;
-    @apply hover:bg-accent-600;
+:where(.btn) {
+    @layer components {
+        width: unset;
+    }
 }
-@utility btn-secondary {
-    @apply text-white bg-accent-700 border-accent-800;
-    @apply hover:bg-accent-800;
-}
-@utility btn-link {
-    @apply inline-block text-sm font-bold align-baseline border-0 shadow-none;
-    @apply hover:bg-transparent hover:underline;
-}
-@utility btn-text {
-    @apply inline-block p-0 m-0 text-sm align-baseline bg-transparent border-0 shadow-none text-neutral-800;
-    @apply hover:bg-transparent hover:text-cyan-900;
-}
-@utility btn-disabled {
-    @apply cursor-not-allowed bg-btn-bg/50 border-btn-bg text-neutral-400;
-    @apply hover:bg-btn-bg/60;
+.prose :where(a.btn:not(.btn-link)):not(:where([class~="not-prose"], [class~="not-prose"] *)),
+.prose :where(a.mall-btn:not(.mall-btn--link)):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply no-underline;
 }
 
 .btn,
 .mall-btn {
-    @apply base-btn;
-
-    &.btn--primary,
-    &.mall-btn--primary {
-        @apply btn-primary;
-    }
-
-    &.btn--secondary,
-    &.mall-btn--secondary {
-        @apply btn-secondary;
-    }
-
-    &.btn--link,
-    &.mall-btn--link {
-        @apply btn-link;
-    }
-
-    &.btn--text,
-    &.mall-btn--text {
-        @apply btn-text;
-    }
-
-    &.btn--full,
-    &.mall-btn--full {
-        @apply w-full;
-    }
-
-    &.btn--disabled,
-    &.mall-btn--disabled, &[disabled] {
-        @apply btn-disabled;
-    }
-
-    &.btn--sm,
-    &.mall-btn--sm {
-        @apply px-4 py-2 text-xs;
-        min-height: 0;
+    @layer components {
+        @apply base-btn;
     }
 }
 
+
+.btn-disabled,
+.btn:disabled,
+.btn[disabled],
+.mall-btn--disabled,
+.mall-btn:disabled,
+.mall-btn[disabled] {
+    @layer components {
+        &:not(.btn-link, .btn-ghost) {
+            @apply bg-base-content/10;
+            box-shadow: none;
+        }
+
+        @apply pointer-events-none cursor-no-drop;
+        --btn-border: #0000;
+        --btn-noise: none;
+        --btn-fg: color-mix(in oklch, var(--color-base-content) 20%, #0000);
+    }
+}
+
+.btn-active,
+.mall-btn--active {
+    @layer components {
+        --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
+        --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
+        isolation: isolate;
+    }
+}
+
+.btn-primary,
+.mall-btn--primary {
+    @layer components {
+        --btn-color: var(--color-primary);
+        --btn-fg: var(--color-primary-content);
+    }
+}
+
+.btn-secondary,
+.mall-btn--secondary {
+    @layer components {
+        --btn-color: var(--color-secondary);
+        --btn-fg: var(--color-secondary-content);
+    }
+}
+
+.btn-accent,
+.mall-btn--accent {
+    @layer components {
+        --btn-color: var(--color-accent);
+        --btn-fg: var(--color-accent-content);
+    }
+}
+
+.btn-neutral,
+.mall-btn--neutral {
+    @layer components {
+        --btn-color: var(--color-neutral);
+        --btn-fg: var(--color-neutral-content);
+    }
+}
+
+.btn-info,
+.mall-btn--info {
+    @layer components {
+        --btn-color: var(--color-info);
+        --btn-fg: var(--color-info-content);
+    }
+}
+
+.btn-success,
+.mall-btn--success {
+    @layer components {
+        --btn-color: var(--color-success);
+        --btn-fg: var(--color-success-content);
+    }
+}
+
+.btn-warning,
+.mall-btn--warning {
+    @layer components {
+        --btn-color: var(--color-warning);
+        --btn-fg: var(--color-warning-content);
+    }
+}
+
+.btn-error,
+.mall-btn--error {
+    @layer components {
+        --btn-color: var(--color-error);
+        --btn-fg: var(--color-error-content);
+    }
+}
+
+.btn-text,
+.mall-btn--text,
+.btn-link,
+.mall-btn--link {
+    @layer components {
+        @apply underline outline-current;
+        --btn-border: #0000;
+        --btn-bg: #0000;
+        --btn-noise: none;
+        --btn-shadow: "";
+
+        &:not(.btn-disabled, .btn:disabled, .btn[disabled]) {
+            --btn-fg: var(--btn-color, var(--color-primary));
+        }
+
+        &:is(.btn-active, :hover, :active:focus, :focus-visible) {
+            --btn-border: #0000;
+            --btn-bg: #0000;
+        }
+    }
+}
+
+/* Sizing */
+.btn-xs {
+    @layer components {
+        --fontsize: 0.6875rem;
+        --btn-p: 0.5rem;
+        --size: calc(var(--size-field, 0.25rem) * 6);
+    }
+}
+
+.btn-sm {
+    @layer components {
+        --fontsize: 0.75rem;
+        --btn-p: 0.75rem;
+        --size: calc(var(--size-field, 0.25rem) * 8);
+    }
+}
+
+.btn-md {
+    @layer components {
+        --fontsize: 0.875rem;
+        --btn-p: 1rem;
+        --size: calc(var(--size-field, 0.25rem) * 10);
+    }
+}
+
+.btn-lg {
+    @layer components {
+        --fontsize: 1.125rem;
+        --btn-p: 1.25rem;
+        --size: calc(var(--size-field, 0.25rem) * 12);
+    }
+}
+
+.btn-xl {
+    @layer components {
+        --fontsize: 1.375rem;
+        --btn-p: 1.5rem;
+        --size: calc(var(--size-field, 0.25rem) * 14);
+    }
+}
+
+.btn-square {
+    @layer components {
+        @apply px-0;
+        width: var(--size);
+        height: var(--size);
+    }
+}
+
+.btn-circle {
+    @layer components {
+        @apply px-0 rounded-full;
+        width: var(--size);
+        height: var(--size);
+    }
+}
+
+.btn-block,
+.mall-btn--full {
+    @layer components {
+        @apply w-full;
+    }
+}

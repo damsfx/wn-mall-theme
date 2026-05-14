@@ -87,7 +87,7 @@ export default defineConfig({
         laravel({
             publicDirectory: 'assets/dist',
             input: [
-                'assets/src/css/theme.css',
+                'assets/src/css/app.css',
                 'assets/src/js/app.js',
             ],
             refresh: {
