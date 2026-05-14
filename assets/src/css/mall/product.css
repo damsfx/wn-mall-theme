@@ -131,10 +131,8 @@
     @apply flex justify-start;
 
     .mall-color-swatches__swatch {
-        width: 24px;
-        height: 24px;
-        margin-right: 6px;
-        @apply border-2;
+        @apply border-2 size-6 mr-1.5;
+
         &.is-active {
             @apply border-primary;
         }
@@ -195,4 +193,21 @@
     @apply p-4 text-sm text-center rounded bg-error/50;
     margin-left: 0;
     margin-top: 2rem;
+}
+
+
+.mall-product-related {
+
+    .mall-products__products {
+        @variant @lg/products {
+            @apply grid-cols-2!;
+        }
+        @variant @xl/products {
+            @apply grid-cols-2!;
+        }
+
+        @variant @3xl/products {
+            @apply grid-cols-4!;
+        }
+    }
 }

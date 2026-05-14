@@ -50,3 +50,4 @@
 @import './mall/signup.css';
 @import './mall/wishlists.css';
 @import './mall/components/callouts.css' layer(components);
+@import './mall/components/forms.css' layer(components);

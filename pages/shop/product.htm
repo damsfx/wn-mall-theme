@@ -41,8 +41,11 @@ sort = "random"
 ==
 {% component 'product' %}
 
-<h2>Other products from this category</h2>
-{% component 'relatedProducts' %}
+
+<div class="mall-product-related">
+    <h2>Other products from this category</h2>
+    {% component 'relatedProducts' %}
+</div>
 
 {% put styles %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">

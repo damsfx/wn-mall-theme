@@ -1,0 +1,13 @@
+/*-------------------------------------------------
+ *  Mall specific forms
+ *-------------------------------------------------*/
+
+.mall-form-comment {
+    @apply mb-4 text-xs text-base-content/60;
+}
+
+.mall-form-control {
+    label {
+        @apply font-semibold;
+    }
+}

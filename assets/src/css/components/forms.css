@@ -20,7 +20,7 @@ input:where([type="radio"]),
 select:where([multiple]),
 textarea,
 select {
-    @apply relative block bg-base-200;
+    @apply relative block bg-base-100;
     @apply rounded-(--radius-field) border-(--input-color);
 
     font-size: max(var(--font-size, 0.875rem), 0.875rem);
@@ -102,23 +102,6 @@ label {
 }
 
 /*
-@utility base-input {
-    @apply base-field;
-    @apply block w-full px-4 py-3 mb-3;
-}
-
-@utility dropdown-pointer {
-    @apply bg-chevron-down bg-no-repeat bg-size-[1.5em] bg-position-[right_1em_top_50%];
-}
-
-@utility base-select {
-    @apply base-field;
-    @apply text-sm pr-8! dropdown-pointer;
-}
-
-@utility mall-label {
-    @apply block mb-2 text-xs font-bold tracking-wide uppercase text-fields-color;
-}
 
 @layer components {
     .mall-selectbox {
@@ -205,7 +188,4 @@ label {
         }
     }
 
-    .mall-form-comment {
-        @apply mb-4 text-xs text-stone-600;
-    }
 } */

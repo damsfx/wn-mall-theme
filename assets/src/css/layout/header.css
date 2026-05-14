@@ -52,5 +52,19 @@ header {
             }
         }
 
+        /* Buttons */
+        [class$="-button"] {
+            > div {
+                @apply w-24;
+
+                > a {
+                    @apply flex flex-col items-center justify-center no-underline text-primary hover:text-secondary hover:font-bold;
+
+                    > svg {
+                        @apply w-6 mb-2 fill-current;
+                    }
+                }
+            }
+        }
     }
 }

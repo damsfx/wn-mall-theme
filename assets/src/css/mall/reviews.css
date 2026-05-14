@@ -14,11 +14,11 @@
         @apply flex py-6 border-t border-base-300;
 
         .mall-product-reviews__info-name {
-            @apply text-sm font-bold text-neutral basis-50;
+            @apply text-sm font-bold text-neutral basis-30;
         }
 
         .mall-product-reviews__info-content {
-            flex: 1 1 auto;
+            @apply flex-[1_1_auto];
 
             .mall-product-reviews__login-required {
                 @apply text-sm text-accent;
@@ -35,16 +35,16 @@
     }
 
     .mall-product-reviews__form-details {
-        @apply overflow-hidden max-h-0;
+        @apply flex flex-col gap-2 overflow-hidden max-h-0;
         transition: .2s ease-out max-height;
 
-        .mall-product-reviews__form-details--visible {
+        &.mall-product-reviews__form-details--visible {
             @apply pt-4 max-h-187.5;
         }
     }
 
     .mall-product-reviews__overall-ratings {
-        @apply flex justify-between;
+        @apply flex justify-between gap-2;
 
         .mall-star {
             @apply size-6;
@@ -62,17 +62,19 @@
 
 .mall-reviews {
     @apply border-t border-base-300;
+    container: reviews / inline-size;
 }
 
 .mall-pagination--reviews {
     @apply mt-8;
 }
 
+/* Review from users */
 .mall-review {
-    @apply pb-4 mt-4 text-sm border-b border-base-300;
+    @apply grid gap-2 pb-4 mt-4 text-sm border-b border-base-300;
 
     .mall-review__rating {
-        @apply mb-4 whitespace-nowrap;
+        @apply whitespace-nowrap;
 
         .mall-star {
             @apply size-4;
@@ -80,27 +82,27 @@
     }
 
     .mall-review__title {
-        @apply text-sm text-base-content;
+        @apply text-sm text-base-content my-0!;
     }
 
     .mall-review__subtitle {
-        @apply mt-2 text-xs font-normal text-neutral;
+        @apply text-xs font-normal text-neutral;
     }
 
     .mall-review__content {
-        @apply mt-4 leading-normal text-neutral;
-    }
-
-    .mall-review__category-reviews {
-        @apply mb-2;
+        @apply text-base leading-normal;
     }
 
     .mall-review__author {
-        @apply text-xs text-neutral;
+        @apply text-xs text-base-content;
     }
 
     .mall-review__details {
-        @apply flex justify-between mt-4;
+        @apply flex justify-between;
+
+        .mall-review__category-reviews {
+            @apply w-1/2;
+        }
     }
     .mall-review__pro-con-list {
         @apply text-xs text-neutral;
@@ -111,17 +113,13 @@
     }
 }
 
-.mall-review__category-reviews {
-    @apply w-1/2;
-}
-
 .mall-category-review {
     --star-size : 14px;
 
-    @apply flex items-center justify-between mb-2 text-xs text-neutral-content;
+    @apply flex items-center justify-between mb-2 text-xs text-base-content;
 
     .mall-category-review__name {
-        flex: 1 1 auto;
+        @apply flex-[1_1_auto];
     }
 
     .mall-category-review__rating {

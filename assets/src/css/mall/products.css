@@ -43,7 +43,7 @@
         @apply flex items-center justify-center border-b border-base-300 h-60;
 
         img {
-            @apply object-contain size-full;
+            @apply object-contain size-full my-0!;
         }
     }
 
@@ -58,7 +58,7 @@
         @apply text-base;
     }
     .mall-products-item__name {
-        @apply font-bold grow;
+        @apply font-bold grow text-pretty;
     }
 
     .mall-products-item__price {
