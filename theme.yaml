@@ -1,16 +1,21 @@
-name: 'Mall Starter'
+name: 'Mall Starter theme'
+author: 'Winter Cms'
+homepage: 'https://wintercms.com'
 description: 'Official starter theme for the Mall e-commerce plugin'
-author: 'Winter'
-homepage: 'https://winter.com'
-require:
-- Winter.Translate
-- Winter.Pages
-- Winter.User
-- Winter.Location
-# - OFFLINE.SiteSearch
-- Winter.Mall
-authorCode: Winter
 code: Mall
+previewImage: 'assets/images/preview.png'
+
+require:
+    - Winter.Translate
+    - Winter.User
+    - Winter.Location
+    - Winter.Pages
+    # - OFFLINE.SiteSearch
+    - Winter.Mall
+
+translate:
+    en: lang/lang-en.yaml
+    fr: lang/lang-fr.yaml
 
 vite:
     theme-mall: vite.config.mjs

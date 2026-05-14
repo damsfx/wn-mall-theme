@@ -39,12 +39,12 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-    -
-        title: Mountainbikes
-        type: mall-category
-        code: ''
-        reference: '2'
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
+    # -
+    #     title: Mountainbikes
+    #     type: mall-category
+    #     code: ''
+    #     reference: '2'
+    #     viewBag:
+    #         isHidden: '0'
+    #         cssClass: ''
+    #         isExternal: '0'

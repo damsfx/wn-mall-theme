@@ -1,0 +1,15 @@
+/*-------------------------------------------------
+ *  Mall ajax handler loader
+ *-------------------------------------------------*/
+
+.mall-loader {
+    @apply absolute inset-0 flex items-center justify-center invisible opacity-0 cursor-wait bg-white/80 z-10000 min-h-100;
+    /*
+    */
+
+    > svg {
+        @apply size-18 lg:size-24;
+
+        stroke: var(--color-accent-600);
+    }
+}

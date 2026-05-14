@@ -1,0 +1,27 @@
+/*-------------------------------------------------
+ *  Mall products pagination
+ *-------------------------------------------------*/
+
+ .mall-pagination {
+
+    .pagination {
+        @apply flex justify-center leading-none;
+    }
+
+    span,
+    a {
+        @apply inline-block p-2 text-sm leading-none text-center no-underline size-8;
+        @apply hover:bg-neutral-200;
+    }
+
+    .disabled > a,
+    .disabled > span {
+        @apply text-gray-400;
+    }
+
+    .active > a,
+    .active > span {
+        @apply text-primary-500 bg-neutral-300 border-primary-500;
+    }
+
+}

@@ -70,20 +70,31 @@
     --color-negative-800: oklch(0.28 0.10 47.8);  /* #562510 */
     --color-negative-900: oklch(0.18 0.06 47.9);  /* #321508 */
 
+    --background-image-logo: url('./../../images/logo.webp');
+    --aspect-logo: 500/142;
+
+    --color-gray: var(--color-gray-500);
+    --color-gray-light: var(--color-gray-300);
+    --color-gray-dark: var(--color-gray-700);
+    --color-gray-darker: var(--color-gray-800);
+    --color-gray-darkest: var(--color-gray-900);
+    --color-smoke: var(--color-stone-200);
+    --color-smoke-light: var(--color-stone-100);
 
     --color-border: var(--color-accent-500);
     --color-header-bg: var(--color-primary-500);
     --color-header-text: var(--color-primary-100);
     --color-footer-bg: var(--color-primary-500);
+    --color-footer-bg2: var(--color-primary-600);
     --color-footer-text: var(--color-primary-200);
 
     --color-fields-color: var(--color-stone-500);
     --color-fields-border: var(--color-border);
     --color-fields-background: var(--color-stone-200);
 
-    --color-btn-bg: white;
-    --color-btn-bghover: var(--color-stone-400);
-    --color-btn-border: var(--color-border);
+    --color-btn-bg: var(--color-accent-100);
+    --color-btn-bghover: var(--color-accent-200);
+    --color-btn-border: var(--color-accent-400);
 
     --background-image-chevron-down: url('./../images/dropdown.svg');
 }
@@ -109,8 +120,18 @@
  */
 @import './layout/layout.css' layer(base);
 @import './layout/header.css' layer(base);
+@import './layout/navigation.css' layer(base);
 
 @import './components/buttons.css';
 @import './components/forms.css';
 
-@import './mall/signup.css' layer(base);
+@import './pages/home.css' layer(base);
+
+@import './mall/layout.css';
+@import './mall/loader.css';
+@import './mall/product.css';
+@import './mall/products.css';
+@import './mall/productsfilter.css';
+@import './mall/pagination.css';
+@import './mall/reviews.css';
+@import './mall/signup.css';

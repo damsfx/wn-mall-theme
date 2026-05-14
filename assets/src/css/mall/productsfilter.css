@@ -1,0 +1,129 @@
+/*-------------------------------------------------
+ *  Mall products filters
+ *-------------------------------------------------*/
+
+.mall-products-filter {
+    @apply pr-8;
+
+    .mall-property-group {
+        @apply mb-4;
+
+        &:has(.noUi-horizontal) {
+            /* Prevent jumping heights when the range filter is loaded */
+            min-height: 105px;
+        }
+
+        .mall-property-group__name {
+            @apply pb-1 mb-4 border-b border-stone-300;
+
+            .mall-property-group--price {
+                @apply flex;
+
+                > div {
+                    @apply flex-1;
+                }
+            }
+        }
+
+        .mall-property-group__description {
+            @apply mb-4 -mt-2 text-xs text-gray-dark;
+        }
+    }
+
+    .mall-property {
+        @apply mb-2;
+
+        &:not(:last-child) .mall-filter.mall-filter--range {
+            margin-bottom: 4rem;
+        }
+
+        .mall-property__label {
+            @apply flex mb-2 text-sm;
+            & > div {
+                @apply flex-1;
+            }
+        }
+        .mall-property__clear-filter {
+            @apply justify-end text-xs font-normal text-right;
+
+            a {
+                @apply no-underline text-gray;
+            }
+        }
+    }
+
+    .mall-filter {
+        @apply flex flex-wrap gap-2;
+
+        .mall-filter__option {
+            @apply p-2 text-sm text-center cursor-pointer bg-smoke;
+            min-width: 40px;
+
+            .mall-filter__option--selected:not(.mall-label--checkbox) {
+                @apply text-white bg-primary-500;
+            }
+        }
+
+        .mall-color-swatch {
+            @apply size-full!;
+        }
+
+        .mall-form-control:has(select) {
+            @apply w-full;
+
+            select {
+                @apply px-2 py-1;
+            }
+        }
+        .mall-input-checkbox {
+            @apply size-6;
+        }
+
+        /* noUi Slider */
+        .noUi-connect {
+            @apply bg-primary-900;
+        }
+        .noUi-horizontal {
+            height: 10px;
+
+            .noUi-handle {
+                width: 25px;
+                height: 20px;
+                right: -13px !important;
+            }
+            .noUi-handle:before {
+                height: 10px;
+                left: 10px;
+                top: 4px;
+            }
+            .noUi-handle:after {
+                height: 10px;
+                left: 12px;
+                top: 4px;
+            }
+        }
+        .noUi-target {
+            font-size: .7rem;
+            margin-bottom: 0;
+        }
+        .noUi-marker-horizontal {
+            width: 1px;
+            height: 4px;
+            &.noUi-marker-large {
+                height: 8px;
+            }
+        }
+        .noUi-value {
+            top: 15px;
+        }
+        .noUi-pips-horizontal {
+            height: 20px;
+            padding: 10px 0 0;
+        }
+
+        .noUi {
+            @apply bg-primary-200;
+        }
+    }
+
+}

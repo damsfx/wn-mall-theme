@@ -1,6 +1,10 @@
 {
+  "assets/images/logo.webp": {
+    "file": "images/logo-CeUWxChR.webp",
+    "src": "assets/images/logo.webp"
+  },
   "assets/src/css/theme.css": {
-    "file": "css/theme-C2IHZmVx.css",
+    "file": "css/theme-D_o8qwwB.css",
     "src": "assets/src/css/theme.css",
     "isEntry": true
   },

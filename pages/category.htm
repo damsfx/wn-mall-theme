@@ -22,13 +22,15 @@ includeChildren = 1
 includeVariants = 1
 includeSliderAssets = 1
 ==
-<div class="flex">
-    <div class="w-1/4">
+<div class="flex gap-4 lg:gap-8">
+    <div class="w-1/4 not-prose">
         {% component 'productsFilter' %}
     </div>
     <div class="w-3/4">
-        <h2 class="pl-4">{{ products.category.name }}</h2>
+        <h2 class="mt-0!">{{ products.category.name }}</h2>
 
-        {% component 'products' %}
+        <div class="not-prose">
+            {% component 'products' %}
+        </div>
     </div>
 </div>

@@ -12,7 +12,8 @@ body {
 
 
 footer {
-    @apply grow text-footer-text bg-footer-bg py-6 border-t-6 border-border;
+    @apply py-6 grow text-footer-text border-t-6 border-border;
+    @apply bg-footer-bg bg-linear-to-bl from-footer-bg to-footer-bg2;
 
     :where(a) {
         @apply underline text-accent-400;
@@ -22,12 +23,12 @@ footer {
         @apply inline-block w-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400;
 
         > svg {
-            @apply w-52 lg:w-full text-white fill-current group-hover:text-accent-400 transition-colors;
+            @apply text-white transition-colors fill-current w-52 lg:w-full group-hover:text-accent-400;
         }
     }
 
     .container {
-        @apply flex gap-8 items-center justify-between;
+        @apply flex items-center justify-between gap-8;
 
         > div {
             &:first-child {

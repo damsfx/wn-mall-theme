@@ -2,18 +2,21 @@ description = "Default"
 
 [cart]
 showDiscountApplier = 1
+discountCodeLimit = 0
 showTaxes = 1
+showShipping = 1
+showProceedToCheckoutButton = 0
 
 [mallDependencies]
 
 [session]
 security = "all"
 
-[@staticPage]
+[staticPage]
 useContent = 1
 default = 0
 
-[@staticMenu]
+[staticMenu]
 code = "main"
 
 [currencyPicker]
@@ -46,6 +49,14 @@ forceUrl = 1
         <div class="prose max-w-none lg:prose-lg">
             {% page %}
         </div>
+
+        {% if this.page.id == 'index' %}
+            {% partial 'home-products.htm'
+                perPage=5
+                sort="random"
+                showbutton=1
+            %}
+        {% endif %}
     </main>
 
     {% partial 'footer' %}
@@ -55,7 +66,10 @@ forceUrl = 1
     #}
 
     {{ vite(['assets/src/js/app.js'], 'theme-mall') }}
+    {#
     {% snowboard all %}
+    #}
+    {% framework extras %}
     {% scripts %}
     {% flash %}
         <p data-control="flash-message" data-interval="7" class="flashmessage {{ type }}">

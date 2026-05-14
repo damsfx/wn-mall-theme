@@ -2,15 +2,6 @@
  *  Site form fields
  *-------------------------------------------------*/
 
-
-
-@utility base-field {
-    /* @apply border rounded appearance-none bg-fields-background text-fields-color border-fields-border; */
-    @apply mt-1 bg-gray-100 border-gray-500 rounded-md;
-}
-
-
-
 input:where([type='text']),
 input:where(:not([type])),
 input:where([type='email']),
@@ -29,7 +20,7 @@ input:where([type="radio"]),
 select:where([multiple]),
 textarea,
 select {
-    @apply base-field;
+    @apply mt-1 border-gray-300 rounded-md;
 }
 
 input:where([type='text']),
@@ -48,7 +39,7 @@ input:where([type='week']),
 select:where([multiple]),
 textarea,
 select {
-    @apply block w-full focus:focus:bg-white focus:ring-0;
+    @apply block w-full bg-gray-100 focus:focus:bg-white focus:ring-0;
 }
 
 label {

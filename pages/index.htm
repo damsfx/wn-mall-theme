@@ -6,6 +6,13 @@ is_hidden = 0
 [viewBag]
 localeUrl[en] = "/"
 ==
-<h1>Welcome to the winter mall theme</h1>
-<p>This theme serves as a starting point for working with the Winter.Mall plugin.</p>
-<p>Feel free to take a look... <br />and customize it for your project to match your brand identity.</p>
+<div class="grid gap-4 place-items-center md:grid-cols-2">
+    <div>
+        <h1>Welcome to the winter mall theme</h1>
+        <p>This theme serves as a starting point for working with the Winter.Mall plugin.</p>
+        <p>Feel free to take a look... <br />and customize it for your project to match your brand identity.</p>
+    </div>
+    <div>
+        <img src="{{ '/assets/images/bag-logo.webp' | theme }}" alt="Winter.Mall bag logo" />
+    </div>
+</div>

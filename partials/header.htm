@@ -17,21 +17,19 @@ function onStart() {
 <header>
     <div class="container">
         <div>
-            <div>
-                <form action="{{ 'search' | page }}" method="get">
-                    <input name="q"
-                           type="text"
-                           value="{{ query }}"
-                           class="mall-input mall-input-sm mb-0"
-                           placeholder="{{ 'offline.mall::frontend.search' | trans }}"
-                           autocomplete="off">
-                    <button type="submit" class="hidden" aria-hidden="true">Search</button>
-                </form>
-            </div>
+            <form action="{{ 'search' | page }}" method="get">
+                <input name="q"
+                       type="text"
+                       value="{{ query }}"
+                       class="mb-0 mall-input mall-input-sm"
+                       placeholder="{{ 'offline.mall::frontend.search' | trans }}"
+                       autocomplete="off">
+                <button type="submit" class="hidden" aria-hidden="true">Search</button>
+            </form>
         </div>
         <div>
-            <a href="{{ '/' | app }}" class="text-3xl text-primary uppercase no-underline ">
-                Mall
+            <a href="{{ '/' | app }}" class="text-3xl no-underline uppercase logo text-primary ">
+                <span>Mall</span>
             </a>
         </div>
         <div>

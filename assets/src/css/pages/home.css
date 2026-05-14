@@ -1,0 +1,18 @@
+/*-------------------------------------------------
+ *  Home page specific styles
+ *-------------------------------------------------*/
+
+.home-products {
+
+    .mall-products {
+
+        .mall-products__products {
+            @apply grid grid-cols-5 my-10;
+        }
+
+        .mall-products-item {
+            width: unset;
+        }
+
+    }
+}

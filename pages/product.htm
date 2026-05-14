@@ -19,25 +19,27 @@ paginate = 0
 sort = "random"
 [wishlistButton]
 ==
-use OFFLINE\Mall\Models\Category;
+<?php
+    use OFFLINE\Mall\Models\Category;
 
-function onStart() {
-    // Fetch the category from the product component.
-    $productComponent = $this->findComponentByName('product');
-    $item = optional($productComponent)->item;
-    if (!$item) {
-        return;
+    function onStart() {
+        // Fetch the category from the product component.
+        $productComponent = $this->findComponentByName('product');
+        $item = optional($productComponent)->item;
+        if (!$item) {
+            return;
+        }
+        $category = optional($item->categories)->first();
+        if (!$category) {
+            return;
+        }
+        // If a category is available, use it for the products component.
+        $this->findComponentByName('relatedProducts')->category = $category;
     }
-    $category = optional($item->categories)->first();
-    if (!$category) {
-        return;
-    }
-    // If a category is available, use it for the products component.
-    $this->findComponentByName('relatedProducts')->category = $category;
-}
+?>
 ==
-
 {% component 'product' %}
+
 <h2>Other products from this category</h2>
 {% component 'relatedProducts' %}
 {% put styles %}

@@ -1,3 +1,7 @@
+/*-------------------------------------------------
+ *  Mall signup/signin form
+ *-------------------------------------------------*/
+
 .mall-signup {
     @apply grid gap-8 m-auto lg:max-w-4/5 md:grid-cols-2;
 
