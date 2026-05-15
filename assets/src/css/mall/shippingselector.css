@@ -1,0 +1,60 @@
+.mall-shipping-method {
+    @apply mt-4;
+
+    &__entry {
+        @apply relative z-0 flex items-center py-8 border border-base-100;
+        &--active {
+            @apply z-10 items-start bg-white border shadow-md opacity-100 border-base-200;
+            .mall-shipping-method__text {
+                @apply opacity-100;
+            }
+        }
+    }
+    &__logo {
+        width: 180px;
+        @apply flex items-start justify-center;
+        img {
+            @apply block w-auto max-w-full;
+        }
+    }
+    &__text {
+        @apply flex items-center flex-1 opacity-50;
+    }
+    &__name {
+        @apply font-bold;
+    }
+    &__description {
+        @apply mt-4 text-xs leading-tight;
+    }
+    &__meta {
+        @apply mt-2 text-sm leading-normal text-neutral;
+    }
+    &__selector {
+        width: 180px;
+        @apply relative z-20;
+    }
+    &__select-button {
+        @apply float-right mr-4 whitespace-nowrap;
+        /* @apply float-right mr-4 whitespace-nowrap mall-btn; */
+    }
+    &__submit {
+        @apply mt-4;
+    }
+    .mall-form-control {
+        @apply mb-2;
+    }
+    [data-validate-for] {
+        @apply mt-0 mb-4;
+    }
+    .mall-two-fields {
+        &--number-cvv {
+            @apply flex;
+            .mall-form-control:first-child {
+                @apply w-3/4;
+            }
+            .mall-form-control:last-child {
+                @apply w-1/4;
+            }
+        }
+    }
+}

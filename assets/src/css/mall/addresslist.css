@@ -1,0 +1,19 @@
+/*-------------------------------------------------
+ *  Mall address list
+ *-------------------------------------------------*/
+
+.mall-address-list {
+
+    .mall-address-list__actions {
+        @apply block float-right my-4;
+        margin-top: -3.4em;
+    }
+
+    .mall-address-list__table-actions {
+        @apply text-right;
+
+        a {
+            @apply mr-4;
+        }
+    }
+}

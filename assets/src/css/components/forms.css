@@ -1,5 +1,5 @@
 /*-------------------------------------------------
- *  Site form fields
+ *  Mall form fields
  *-------------------------------------------------*/
 
 @utility base-field {
@@ -95,6 +95,7 @@ label {
 }
 
 
+
 /*
 
 @layer components {
@@ -138,19 +139,6 @@ label {
         color: #ff0000;
     }
 
-    .mall-form-control {
-        @apply w-full mb-6;
-
-        label {
-            @apply mall-label;
-        }
-        input, textarea {
-            @apply base-input;
-        }
-        select {
-            @apply w-full cursor-pointer base-select;
-        }
-    }
 
     .mall-form-checkbox {
         @apply w-full mb-6;
@@ -174,7 +162,7 @@ label {
         text-indent: -27px;
         padding-left: 27px;
 
-        > input {
+        > input {width-limited
             @apply mr-2;
         }
         > span {

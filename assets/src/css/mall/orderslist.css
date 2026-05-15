@@ -1,0 +1,51 @@
+/*-------------------------------------------------
+ *  Mall user orders list
+ *-------------------------------------------------*/
+
+.mall-orders-list {
+
+    .mall-orders-list__order {
+        @apply cursor-pointer;
+
+        &:hover td {
+            @apply bg-base-100;
+        }
+        &.is-open {
+            @apply bg-base-100;
+        }
+    }
+
+    .mall-orders-list__order--unpaid {
+
+        td {
+            @apply text-orange-700 bg-orange-100;
+        }
+
+        &:hover td {
+            @apply bg-orange-300/50;
+        }
+        a {
+            @apply font-semibold text-red-800;
+        }
+    }
+
+    .mall-orders-list__details {
+        @apply bg-base-100;
+    }
+}
+
+.mall-order-details {
+    @apply px-4;
+
+    .mall-order-details__row {
+        @apply grid gap-4 mb-4 lg:grid-cols-2;
+    }
+    .mall-order-details__detail {
+        :where(h5) {
+            @apply mb-2 font-semibold;
+        }
+        :where(p) {
+            @apply my-0;
+        }
+    }
+}

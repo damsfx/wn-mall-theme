@@ -1,0 +1,53 @@
+/*-------------------------------------------------
+ *  Mall cart summary
+ *
+ * Displayed on cart and quickcheckout pages
+ *
+ *-------------------------------------------------*/
+
+.mall-cart-summary {
+
+    p {
+        @apply my-0;
+    }
+
+    .mall-cart-summary__info {
+        @apply flex justify-between mb-8 text-xs leading-normal;
+
+        > * {
+            @apply w-1/4;
+
+            &:not(:last-child) {
+                @apply pr-8;
+            }
+        }
+    }
+
+    .mall-cart-summary__info--two-columns {
+        > * {
+            @apply w-1/2;
+        }
+    }
+
+    .mall-cart-summary__heading {
+        @apply pb-1 my-0 mb-2 border-b border-base-300;
+    }
+
+    .mall-cart-summary__method-logo {
+        @apply max-w-full pt-4;
+        min-height: 140px;
+    }
+
+    a {
+        @apply text-black;
+    }
+    .mall-address {
+        @apply flex flex-col justify-between;
+        min-height: 160px;
+
+
+        .mall-address__actions {
+            @apply mt-4;
+        }
+    }
+}

@@ -3,7 +3,7 @@
  *-------------------------------------------------*/
 
 .mall-callout {
-    @apply px-4 py-6 mb-8 text-sm text-center bg-warning/30 text-warning;
+    @apply px-4 py-6 mb-8 text-sm text-center bg-warning/30 text-warning-content;
 }
 
 .mall-callout--neutral {

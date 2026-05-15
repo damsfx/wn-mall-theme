@@ -47,7 +47,7 @@ forceUrl = 1
     {% partial 'header' %}
     {% partial 'navigation' %}
 
-    <main class="container py-8">
+    <main class="container py-8 page-{{ this.page.id }}">
         <div class="prose max-w-none">
             {% page %}
         </div>

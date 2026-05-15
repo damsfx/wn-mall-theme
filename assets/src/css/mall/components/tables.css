@@ -1,0 +1,17 @@
+/*-------------------------------------------------
+ *  Mall tables
+ *-------------------------------------------------*/
+
+table.mall-table {
+    @apply w-full my-0 text-left;
+    border-collapse: collapse;
+
+    :where(tbody td) {
+        @apply text-sm leading-normal border-t border-neutral whitespace-nowrap;
+        @apply align-top;
+    }
+
+    :where(thead th) {
+        @apply font-semibold text-neutral bg-base-content;
+    }
+}

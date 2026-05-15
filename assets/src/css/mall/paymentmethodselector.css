@@ -2,9 +2,9 @@
     @apply mt-4;
 
     .mall-payment-method__entry {
-        @apply relative z-0 flex items-center py-8 border border-base-100;
+        @apply relative z-0 flex items-center border lg:py-4 border-base-100;
 
-        .mall-payment-method--active {
+        &.mall-payment-method__entry--active {
             @apply z-10 items-start bg-white border shadow-md opacity-100 border-base-200;
 
             .mall-payment-method__text {
@@ -20,6 +20,7 @@
             @apply block w-auto max-w-full;
         }
     }
+
     .mall-payment-method__text {
         @apply flex items-center flex-1 opacity-50;
 
@@ -41,7 +42,17 @@
             @apply mt-2 text-sm leading-normal text-neutral;
         }
         .mall-payment-method__data {
-            @apply w-full mt-8;
+            @apply w-full mt-4;
+
+            .mall-form-control {
+                div.mall-input {
+                    @apply grid place-items-center;
+                    
+                    > div {
+                        @apply w-full;
+                    }
+                }
+            }
         }
     }
 
@@ -50,8 +61,8 @@
         @apply relative z-20;
     }
     .mall-payment-method__select-button {
+        @apply base-btn;
         @apply float-right mr-4 whitespace-nowrap;
-        /* mall-btn; */
     }
     .mall-payment-method__submit {
         @apply mt-4;
@@ -78,7 +89,7 @@
     cursor: pointer;
     transition: .2s ease;
     transition-property: border-color, box-shadow;
-    
+
     .mall-payment-customer-method__name {
         @apply font-bold truncate whitespace-nowrap;
     }

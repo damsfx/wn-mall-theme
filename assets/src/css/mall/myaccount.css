@@ -1,0 +1,39 @@
+/*-------------------------------------------------
+ *  Mall Account page
+ *-------------------------------------------------*/
+
+.mall-my-account {
+    @apply flex;
+
+    :where(h2, h4) {
+        @apply my-0;
+    }
+
+    .mall-my-account__nav {
+        @apply w-1/5;
+    }
+    .mall-my-account__content {
+        @apply w-4/5 pl-8;
+
+        h2 {
+            @apply mb-8;
+        }
+    }
+
+    .mall-my-account__nav-item {
+        @apply px-2 py-3 cursor-pointer;
+
+        a {
+            @apply block no-underline text-neutral;
+        }
+
+        &:hover,
+        &.mall-my-account__nav-item--active {
+            @apply bg-base-100;
+        }
+
+        &.mall-my-account__nav-item--active a {
+            @apply font-semibold text-black;
+        }
+    }
+}

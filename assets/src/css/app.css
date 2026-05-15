@@ -42,7 +42,6 @@
 
 @import './mall/cart.css';
 @import './mall/checkout.css';
-@import './mall/layout.css';
 @import './mall/loader.css';
 @import './mall/product.css';
 @import './mall/products.css';
@@ -50,10 +49,19 @@
 @import './mall/pagination.css';
 @import './mall/quickcheckout.css';
 @import './mall/paymentmethodselector.css';
+@import './mall/addresslist.css';
+@import './mall/addressselector.css';
+@import './mall/shippingselector.css';
+@import './mall/cartsummary.css';
 @import './mall/reviews.css';
 @import './mall/signup.css';
+@import './mall/myaccount.css';
+@import './mall/orderslist.css';
 @import './mall/wishlists.css';
 
 @import './mall/components/callouts.css' layer(components);
+@import './mall/components/layout.css' layer(components);
 @import './mall/components/modal.css' layer(components);
 @import './mall/components/forms.css';
+@import './mall/components/tables.css' layer(utilities);
+@import './mall/components/switcher.css' layer(utilities);

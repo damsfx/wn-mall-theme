@@ -123,18 +123,9 @@
     }
 }
 
-.mall-cart-actions {
-    @apply max-cart-width thick-border;
-    @apply pt-8 mt-8 text-right;
-
-    .mall-btn {
-        @apply text-base;
-    }
-}
-
 .mall-discount-applier {
     @apply max-cart-width;
-    @apply flex justify-end w-full mt-8;
+    @apply flex justify-end w-full mt-6;
 
     form {
         @apply flex items-end w-1/2;
@@ -149,7 +140,7 @@
     }
 
     .mall-btn {
-        @apply py-2 ml-2 shrink;
+        @apply py-2 ml-2 whitespace-nowrap shrink;
     }
 
     .mall-form-control {
@@ -159,8 +150,25 @@
     }
 }
 
+.mall-cart-actions {
+    @apply max-cart-width thick-border;
+    @apply pt-6 mt-6 text-right;
+
+    .mall-btn {
+        @apply text-base;
+    }
+}
+
+
+/* If .mall-cart-summary if followed by .mall-cart apply max-cart-width to mall-cart-summary. */
+.mall-cart-summary:has(+ .mall-cart){
+    @apply max-cart-width;
+}
+
 /*
- *  Apply to .mall-cart scope, .mall-quick-checkout__cart
+ *  Apply to different contexts
+ *      - .mall-cart
+ *      - .mall-quick-checkout__cart
  */
     .mall-cart__total td,
     .mall-cart__grand-total td,

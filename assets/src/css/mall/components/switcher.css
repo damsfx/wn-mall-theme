@@ -1,0 +1,29 @@
+/*-------------------------------------------------
+ *  Mall switchers
+ *-------------------------------------------------*/
+
+.mall-switcher__outer {
+    @apply inline-block;
+}
+
+.mall-switcher {
+    @apply flex;
+}
+
+.mall-switcher__item {
+    @apply flex px-8 py-2 text-sm no-underline border border-l-0 grow whitespace-nowrap border-base-200;
+    @apply no-underline!;
+
+    &:first-child {
+        @apply border-l rounded-l-sm;
+    }
+
+    &:last-child {
+        @apply rounded-r-sm;
+    }
+
+    &:hover,
+    &.mall-switcher__item--active {
+        @apply bg-base-200;
+    }
+}

@@ -1,0 +1,13 @@
+/*-------------------------------------------------
+ *  Mall address selector
+ *-------------------------------------------------*/
+
+ .mall-address-selector {
+    label {
+        @apply text-xs;
+    }
+    select {
+        /* @apply text-xs mall-selectbox-sm; */
+        @apply text-xs;
+    }
+}

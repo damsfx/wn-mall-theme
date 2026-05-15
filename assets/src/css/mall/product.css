@@ -114,12 +114,21 @@
     }
 }
 
-.mall-add-to-cart-button {
-    @apply base-btn;
-    @apply w-full font-bold uppercase text-shadow-md;
+/* Cart column */
+.mall-product__cart {
+    .mall-form-control {
+        select {
+            @apply w-full;
+        }
+    }
 
-    --btn-color: var(--color-primary);
-    --btn-fg: var(--color-primary-content);
+    .mall-add-to-cart-button {
+        @apply base-btn;
+        @apply w-full font-bold uppercase text-shadow-md;
+
+        --btn-color: var(--color-primary);
+        --btn-fg: var(--color-primary-content);
+    }
 }
 
 
