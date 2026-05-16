@@ -5,35 +5,17 @@
     data-request="{{ __SELF__ }}::onResetPassword"
     data-request-update="'{{ __SELF__ }}::complete': '#partialUserResetForm'"
 >
-
-    <input type="hidden" name="token" value="{{ __SELF__.token }}"/>
-    <input type="hidden" name="email" value="{{ __SELF__.email }}"/>
-
     <div class="mall-form-control">
-        <label for="inputPassword">{{ 'offline.mall::frontend.password_reset.new_password' | trans }}</label>
-        <input
-            name="password"
-            type="password"
-            class="form-control"
-            id="inputPassword"
-            autocomplete="new-password"
-        >
+        <label for="resetCode">{{ 'offline.mall::frontend.password_reset.activation_code' | trans }}</label>
+        <input name="code" type="text" class="form-control" id="resetCode" value="{{ __SELF__.code }}">
     </div>
 
     <div class="mall-form-control">
-        <label for="inputPasswordConfirmation">{{ 'offline.mall::frontend.form.password_repeat' | trans }}</label>
-        <input
-            name="password_confirmation"
-            type="password"
-            class="form-control"
-            id="inputPasswordConfirmation"
-            autocomplete="new-password"
-        >
+        <label for="resetPassword">{{ 'offline.mall::frontend.password_reset.new_password' | trans }}</label>
+        <input name="password" type="password" class="form-control" id="resetPassword">
     </div>
 
-
-    <button
-        type="submit"
-        class="mall-btn mall-btn--primary"
-    >{{ 'offline.mall::frontend.password_reset.reset' | trans }}</button>
+    <button type="submit" class="mall-btn mall-btn--primary">
+    {{ 'offline.mall::frontend.password_reset.reset' | trans }}
+    </button>
 </form>
