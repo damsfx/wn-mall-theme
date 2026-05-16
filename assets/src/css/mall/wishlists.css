@@ -1,52 +1,65 @@
 /*-------------------------------------------------
  *  Mall product wish lists
  *-------------------------------------------------*/
+
 /*
+ * Global wishlist manager page
+ */
 .mall-wishlists-manager {
-    display: flex;
-    &__lists {
-        width: 350px;
+    @apply flex;
+
+    /*
+     * Two columns
+     */
+    .mall-wishlists-manager__lists {
+        @apply w-1/5;
     }
-    &__contents {
-        flex: 1 1 auto;
-        @apply p-8 bg-gray-lightest;
+    .mall-wishlists-manager__contents {
+        @apply flex-[1_1_auto] p-8 bg-base-100;
     }
-    &__header {
+
+    /* Header */
+    .mall-wishlists-manager__header {
         @apply mb-8;
     }
-    &__well {
+        .mall-wishlists-manager__form {
+            @apply flex;
+        }
+        .mall-wishlists-manager__input {
+            @apply flex-[1_1_auto] w-full p-2 text-lg border-b border-neutral bg-white/75;
+        }
+        .mall-wishlists-manager__action-button {
+            @apply flex-[1_1_60px] ml-5;
+
+            &[data-request="onDelete"]:hover {
+                @apply text-black bg-warning;
+            }
+        }
+        .mall-trash-icon {
+            @apply fill-current w-3.5;
+        }
+
+    /* Wishlist content */
+    .mall-wishlists-manager__well {
         @apply flex-1 bg-white rounded shadow;
     }
-    &__input {
-        @apply w-full px-0 py-2 text-lg border-b border-gray;
-        background: transparent;
-        flex: 1 1 auto;
-    }
-    &__form {
-        display: flex;
-    }
-    &__action-button {
-        flex: 1 1 60px;
-        margin-left: 20px;
-    }
-    &__actions {
-        text-align: right;
-        @apply mt-8;
+        .mall-wishlist-empty {
+            @apply p-4 text-center;
+        }
+
+    /* Wishlist bottom actions buttons */
+    .mall-wishlists-manager__actions {
+        @apply mt-8 text-right;
+
         .mall-btn {
             @apply ml-4;
         }
     }
-    .mall-trash-icon {
-        width: 14px;
-        @apply fill-current text-gray;
-    }
-    .mall-wishlist-empty {
-        @apply p-4;
-        text-align: center;
-    }
 }
-*/
 
+/*
+ * Product page light wishlist manager
+ */
 .mall-wishlist-button {
     position: relative;
 
@@ -76,42 +89,50 @@
         pointer-events: none;
     }
 }
+    .mall-add-to-wishlist-button {
+        @apply mt-1;
+    }
 
+/*
+ * "Short" list of wishlists
+ *  ⚠ used in :
+ *      - whishlists manager
+ *      - product page
+ */
 .mall-wishlists {
     width: 100%;
 
-    .mall-wishlists--height-limited {
+    &.mall-wishlists--height-limited {
         overflow-y: auto;
         max-height: 400px;
     }
 }
+    .mall-wishlist-item {
+        @apply flex gap-4 p-4 cursor-pointer;
+        text-decoration: none;
+        color: inherit;
 
-.mall-wishlist-item {
-    @apply flex gap-4 p-4 cursor-pointer;
-    text-decoration: none;
-    color: inherit;
+        &:hover,
+        &.mall-wishlist-item--active {
+            @apply bg-base-100;
+        }
 
-    &:hover,
-    .mall-wishlist-item--active {
-        @apply bg-base-200;
-    }
+        .mall-wishlist-item__data {
+            @apply grow;
 
-    .mall-wishlist-item__data {
-        @apply grow;
+            .mall-wishlist-item__name {
+                @apply font-semibold;
+            }
+            .mall-wishlist-item__description {
+                @apply mt-1 text-xs text-neutral;
+            }
+        }
 
-        .mall-wishlist-item__description {
-            @apply mt-1 text-neutral;
+        .mall-wishlist-item__meta {
+            @apply shrink;
+
+            text-align: right;
+            flex: 0 0 auto;
         }
     }
 
-    .mall-wishlist-item__meta {
-        @apply shrink;
-
-        text-align: right;
-        flex: 0 0 auto;
-    }
-}
-
-.mall-add-to-wishlist-button {
-    @apply mt-1;
-}
