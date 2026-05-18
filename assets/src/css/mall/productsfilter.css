@@ -15,13 +15,13 @@
 
         .mall-property-group__name {
             @apply pb-1 mb-4 border-b border-base-300;
+        }
 
-            .mall-property-group--price {
-                @apply flex;
+        .mall-property-group__name--price {
+            @apply flex;
 
-                > div {
-                    @apply flex-1;
-                }
+            > div {
+                @apply flex-1;
             }
         }
 
@@ -43,12 +43,13 @@
                 @apply flex-1;
             }
         }
-        .mall-property__clear-filter {
-            @apply justify-end text-xs font-normal text-right;
+    }
 
-            a {
-                @apply no-underline text-secondary-content;
-            }
+    .mall-property__clear-filter {
+        @apply justify-end text-xs font-normal text-right;
+
+        a {
+            @apply no-underline text-accent;
         }
     }
 
