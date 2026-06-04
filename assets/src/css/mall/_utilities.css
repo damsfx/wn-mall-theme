@@ -1,0 +1,30 @@
+/*-------------------------------------------------
+ *  Mall utilites
+ *-------------------------------------------------*
+ * You can make quick changes by adjusting
+ * the values in these utilities
+ *-------------------------------------------------*/
+
+/* Global utilities */
+
+@utility max-cart-width {
+    @apply w-full mx-auto lg:max-w-4/5;
+}
+
+@utility thin-border {
+    @apply border-t border-base-200;
+}
+
+@utility thick-border {
+    @apply border-t border-base-300;
+}
+
+/* Forms utilities */
+
+@utility mall-selectbox-sm {
+    --size: calc(var(--size-field, 0.25rem) * 6);
+}
+
+@utility mall-input-sm {
+    --size: calc(var(--size-field, 0.25rem) * 5);
+}

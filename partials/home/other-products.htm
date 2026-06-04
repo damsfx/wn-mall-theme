@@ -1,0 +1,38 @@
+description = "Affiche des produits pour la home page"
+
+[viewBag]
+
+[products]
+category = {{ category }}
+filterComponent = "productsFilter"
+setPageTitle = 0
+includeVariants = 1
+includeChildren = 1
+perPage = "{{ perPage }}"
+paginate = 0
+sort = "{{ sort }}"
+==
+<?php
+    function onEnd()
+    {
+        $this['title'] = $this?->category->name;
+        $this['description'] = $this?->category->meta_description;
+    }
+?>
+==
+<section class="prose home-products max-w-none lg:prose-lg{{ sectionCss ? (' '~ sectionCss) : '' }}">
+    <div class="container pb-6">
+        <h2 class="mb-4!">{{ title }}</h2>
+        {% if description %}
+            <p class="text-primary">{{ description }}</p>
+        {% endif %}
+
+        {% component 'products' %}
+
+        {% if showLink != '0' %}
+        <div class="text-center">
+            <a href="{{ 'shop/category' | page({'slug': category.slug}) }}" class="{{ linkCss ?: 'btn btn-primary' }}">{{ 'winter.mall::frontend.show_all' | trans }}</a>
+        </div>
+        {% endif %}
+    </div>
+</section>

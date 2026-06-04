@@ -15,6 +15,7 @@
         @variant @xl/products {
             @apply grid-cols-3 gap-4;
         }
+
         /*
         Disbaled as settings for comopents get 9 products, must stay on a multiple of 3
         @variant @3xl/products {
@@ -52,16 +53,18 @@
 
     .mall-products-item__info {
         @apply grid gap-1;
+
+        .mall-products-item__info-primary,
+        .mall-products-item__info-secondary {
+            @apply grid gap-1 grid-cols-[auto_min-content];
+        }
+        .mall-products-item__info-primary {
+            @apply text-base;
+        }
     }
-    .mall-products-item__info-primary,
-    .mall-products-item__info-secondary {
-        @apply flex gap-2;
-    }
-    .mall-products-item__info-primary {
-        @apply text-base;
-    }
+
     .mall-products-item__name {
-        @apply font-bold grow text-pretty;
+        @apply font-bold grow text-pretty truncate;
     }
 
     .mall-products-item__price {

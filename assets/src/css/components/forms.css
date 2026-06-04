@@ -2,29 +2,7 @@
  *  Mall form fields
  *-------------------------------------------------*/
 
-@utility base-field {
-    --input-color: color-mix(in oklab, var(--color-base-content) 20%, #0000);
-    font-size: max(var(--font-size, 0.875rem), 0.875rem);
 
-    @apply relative block bg-base-100;
-    @apply rounded-(--radius-field) border-(--input-color);
-}
-
-@utility base-input-field {
-    --size: calc(var(--size-field, 0.25rem) * 10);
-
-    @apply gap-2 px-3 mt-1 appearance-none shrink whitespace-nowrap;
-    @apply h-(--size);
-
-    &:focus,
-    &:focus-within {
-        --input-color: var(--color-accent);
-
-        @apply isolate outline-offset-2;
-        box-shadow: 0 1px color-mix(in oklab, var(--input-color) calc(var(--depth) * 10%), #0000);
-        outline: 2px solid var(--input-color);
-    }
-}
 
 input:where([type='text']),
 input:where(:not([type])),

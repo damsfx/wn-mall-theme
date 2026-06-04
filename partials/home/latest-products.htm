@@ -15,14 +15,14 @@ sort = "{{ sort }}"
     <div class="container pb-6">
         <h2>{{ 'home.latest_products.title' | _ }}</h2>
         {% if description %}
-            <p class="text-center text-primary">{{ description }}</p>
+            <p class="text-primary">{{ description }}</p>
         {% endif %}
 
         {% component 'products' %}
 
-        {% if showbutton != '0' %}
+        {% if showLink != '0' %}
         <div class="text-center">
-            <a href="{{ 'shop/index' | page }}" class="btn btn--primary">{{ 'home.latest_products.button' | _ }}</a>
+            <a href="{{ 'shop/category' | page({'slug': null}) }}" class="btn btn-primary">{{ 'home.latest_products.button' | _ }}</a>
         </div>
         {% endif %}
     </div>

@@ -54,10 +54,24 @@ forceUrl = 1
     </main>
 
     {% if this.page.id == 'index' %}
-        {% partial 'home-products.htm'
+        {% partial 'home/latest-products.htm'
             perPage=4
             sort="random"
-            showbutton=1
+            showLink=1
+        %}
+        {% partial 'home/other-products.htm'
+            sectionCss="inverse"
+            category=1
+            perPage=4
+            sort="random"
+            showLink=1
+            linkCss="btn btn-secondary"
+        %}
+        {% partial 'home/other-products.htm'
+            category=4
+            perPage=4
+            sort="random"
+            showLink=1
         %}
     {% endif %}
 

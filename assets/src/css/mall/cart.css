@@ -2,16 +2,6 @@
  *  Mall cart
  *-------------------------------------------------*/
 
-/* You can make quick changes by adjusting the values in these utilities */
-@utility max-cart-width {
-    @apply w-full mx-auto lg:max-w-4/5;
-}
-@utility thin-border {
-    @apply border-t border-base-200;
-}
-@utility thick-border {
-    @apply border-t border-base-300;
-}
 
 
 .mall-cart {

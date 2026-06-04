@@ -6,9 +6,31 @@
 
     @apply bg-primary-50;
 
+    &.inverse {
+        @apply bg-primary-400;
+
+        h2 {
+            @apply text-white!;
+        }
+        p.text-primary {
+            @apply text-primary-content!;
+        }
+    }
+
+    > h2 {
+        @apply mb-8!;
+    }
+
     .mall-products {
+
+        /* The grid */
+        .mall-products__products {
+            /* 1 column on mobile, 2 on tablet, 4 on desktop */
+            @apply md:grid-cols-2 lg:grid-cols-4;
+        }
+
         .mall-products-item {
-            @apply bg-white;
+            @apply bg-white rounded-md shadow-sm;
         }
     }
 }

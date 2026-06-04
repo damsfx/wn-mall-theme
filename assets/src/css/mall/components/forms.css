@@ -2,15 +2,6 @@
  *  Mall specific forms
  *-------------------------------------------------*/
 
-@utility mall-selectbox-sm {
-    --size: calc(var(--size-field, 0.25rem) * 6);
-}
-
-@utility mall-input-sm {
-    --size: calc(var(--size-field, 0.25rem) * 5);
-}
-
-
 .mall-form-control,
 .mall-two-fields {
     @apply mb-6;

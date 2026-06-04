@@ -34,34 +34,36 @@
 @import './layout/header.css' layer(base);
 @import './layout/navigation.css' layer(base);
 
-@import './pages/home.css' layer(base);
-@import './pages/test-ui.css' layer(base);
+@import './components/_utilities.css';
+@import './components/buttons.css' layer(components);
+@import './components/forms.css' layer(components);
 
-@import './components/buttons.css';
-@import './components/forms.css';
-
-@import './mall/cart.css';
-@import './mall/checkout.css';
-@import './mall/loader.css';
-@import './mall/product.css';
-@import './mall/products.css';
-@import './mall/productsfilter.css';
-@import './mall/pagination.css';
-@import './mall/quickcheckout.css';
-@import './mall/paymentmethodselector.css';
-@import './mall/addresslist.css';
-@import './mall/addressselector.css';
-@import './mall/shippingselector.css';
-@import './mall/cartsummary.css';
-@import './mall/reviews.css';
-@import './mall/signup.css';
-@import './mall/myaccount.css';
-@import './mall/orderslist.css';
-@import './mall/wishlists.css';
+@import './mall/_utilities.css';
+@import './mall/cart.css' layer(base);
+@import './mall/checkout.css' layer(base);
+@import './mall/loader.css' layer(base);
+@import './mall/product.css' layer(base);
+@import './mall/products.css' layer(base);
+@import './mall/productsfilter.css' layer(base);
+@import './mall/pagination.css' layer(base);
+@import './mall/quickcheckout.css' layer(base);
+@import './mall/paymentmethodselector.css' layer(base);
+@import './mall/addresslist.css' layer(base);
+@import './mall/addressselector.css' layer(base);
+@import './mall/shippingselector.css' layer(base);
+@import './mall/cartsummary.css' layer(base);
+@import './mall/reviews.css' layer(base);
+@import './mall/signup.css' layer(base);
+@import './mall/myaccount.css' layer(base);
+@import './mall/orderslist.css' layer(base);
+@import './mall/wishlists.css' layer(base);
 
 @import './mall/components/callouts.css' layer(components);
 @import './mall/components/layout.css' layer(components);
 @import './mall/components/modal.css' layer(components);
-@import './mall/components/forms.css';
+@import './mall/components/forms.css' layer(components);
 @import './mall/components/tables.css' layer(utilities);
 @import './mall/components/switcher.css' layer(utilities);
+
+@import './pages/home.css' layer(base);
+@import './pages/test-ui.css' layer(base);
