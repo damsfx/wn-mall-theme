@@ -1,0 +1,26 @@
+description = "Add more products sections to home page"
+
+[viewBag]
+==
+{% partial 'home/products-section.htm'
+    perPage=4
+    sort="random"
+    showButton=1
+    buttonTransKey="home.latest_products.button"
+%}
+{% partial 'home/products-section.htm'
+    sectionCss="inverse"
+    category=1
+    perPage=4
+    sort="random"
+    showButton=1
+    buttonCss="btn btn-secondary"
+    buttonTransKey="winter.mall::frontend.show_all"
+%}
+{% partial 'home/products-section.htm'
+    category=4
+    perPage=4
+    sort="random"
+    showButton=1
+    buttonTransKey="winter.mall::frontend.show_all"
+%}
